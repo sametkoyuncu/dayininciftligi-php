@@ -1,0 +1,2 @@
+Kodlamada yardımcı olacak örneklerin yer aldığı dizin
+kısaca 'copy+paste center'
