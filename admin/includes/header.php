@@ -1,13 +1,17 @@
 <?php ?>
 <!doctype html>
-<html class="no-js" lang="en">
-
+<html class="no-js" lang="tr">
+<?php 
+    include "baglan.php"; 
+    setlocale(LC_TIME, "turkish"); //başka bir dil içinse burada belirteceksin.
+    setlocale(LC_ALL,'turkish'); //başka bir dil içinse burada belirteceksin.
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Dayının Çiftliği | Admin Paneli</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="../assets/images/icon/favicon.png">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/themify-icons.css">

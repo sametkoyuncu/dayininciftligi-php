@@ -18,7 +18,7 @@
                             </li>
                             <hr style="border:0.5px solid darkslategrey">
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Site Bilgileri
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-id-badge"></i><span>Site Bilgileri
                                     </span></a>
                                 <ul class="collapse">
                                 <li class=""><a href="index.php">Genel Bilgiler</a></li>   
@@ -26,12 +26,12 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Bölümler
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-grid2"></i><span>Bölümler
                                     </span></a>
                                 <ul class="collapse">
-                                <li class=""><a href="index.php">Üst Kısım</a></li>
-                                <li class=""><a href="index.php">Giriş</a></li>
-                                <li class=""><a href="index.php">Ürünler</a></li>
+                                <li class=""><a href="ust-kisim.php">Üst Kısım</a></li>
+                                <li class=""><a href="giris.php">Giriş</a></li>
+                                <li class=""><a href="urunler.php">Ürünler</a></li>
                                 <li class=""><a href="index.php">Galeri</a></li>
                                 <li class=""><a href="index.php">Blog</a></li>
                                 <li class=""><a href="index.php">İletişim</a></li>
@@ -39,7 +39,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Tekil Sayfalar
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-file"></i><span>Tekil Sayfalar
                                     </span></a>
                                 <ul class="collapse">
                                 <li class=""><a href="index.php">Çoklu Yazı Sayfası</a></li>   
@@ -56,7 +56,7 @@
                                 </ul>
                             </li>-->
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Yazılar
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-book"></i><span>Yazılar
                                     </span></a>
                                 <ul class="collapse">
                                 <li class=""><a href="index.php">Tüm Yazılar</a></li>
@@ -66,7 +66,15 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Yorumlar
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-image"></i><span>Galeri
+                                    </span></a>
+                                <ul class="collapse">
+                                <li class=""><a href="index.php">Tüm Görseller</a></li>
+                                <li class=""><a href="index.php">Yeni Ekle</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-comments-smiley"></i><span>Yorumlar
                                     </span></a>
                                 <ul class="collapse">
                                 <li class=""><a href="index.php">Onaylananlar</a></li>
@@ -75,7 +83,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Bileşenler
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-right"></i><span>Bileşenler
                                     </span></a>
                                 <ul class="collapse">
                                 <li class=""><a href="index.php">Tüm Bileşenler</a></li>
@@ -84,7 +92,7 @@
                             </li>
                             <hr style="border:0.5px solid darkslategrey">
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>E-Postalar
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-email"></i><span>E-Postalar
                                     </span></a>
                                 <ul class="collapse">
                                 <li class=""><a href="index.php">Okunmamış</a></li>
@@ -93,7 +101,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Aboneler
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-user"></i><span>Aboneler
                                     </span></a>
                                 <ul class="collapse">
                                 <li class=""><a href="index.php">Tüm Aboneler</a></li>
