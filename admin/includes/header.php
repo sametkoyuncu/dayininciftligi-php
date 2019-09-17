@@ -6,6 +6,12 @@
     setlocale(LC_TIME, "turkish"); //başka bir dil içinse burada belirteceksin.
     setlocale(LC_ALL,'turkish'); //başka bir dil içinse burada belirteceksin.
 ?>
+<?php
+    #page_id varsayılan olarak index.php nin idsi olan 1 değerini alıyor
+    $page_id=1;
+    #eğer başka sayfalara geçiş yapıldıysa urlden page_id alıyor
+    if(isset($_GET['pg'])){$page_id=$_GET['pg'];}
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">

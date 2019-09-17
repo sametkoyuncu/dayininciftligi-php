@@ -1,4 +1,11 @@
-<?php ?>
+<?php 
+/*
+Sayfa id'leri
+1 index          |  2 raporlar      |  3 genel bilgiler  |  4 meta            |  5 üst kısım      
+6 giris          |  7 ürünler       |  8 galeri          |  9 blog            |  10 iletişim 
+11 alt kısım     |  12
+*/
+?>
 <div class="sidebar-menu">
             <div class="sidebar-header">
                 <div class="logo">
@@ -9,33 +16,35 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
-                            <li class="active">
+                            <!-- açık olan sayfanın satırına 'active' classı ekleme -->
+                            <!-- page id ye göre class ekliyor -->
+                            <li <?php if($page_id==1 || $page_id==2){ echo 'class="active"';} ?>>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>Kontrol Paneli</span></a>
                                 <ul class="collapse">
-                                    <li class="active"><a href="index.php">Anasayfa</a></li>
-                                    <li class=""><a href="index.php">Raporlar</a></li>
+                                    <li <?php if($page_id==1){ echo 'class="active"';} ?>><a href="index.php?pg=1">Anasayfa</a></li>
+                                    <li <?php if($page_id==2){ echo 'class="active"';} ?>><a href="raporlar.php?pg=2">Raporlar</a></li>
                                 </ul>
                             </li>
                             <hr style="border:0.5px solid darkslategrey">
-                            <li>
+                            <li <?php if($page_id==3 || $page_id==4){ echo 'class="active"';} ?>>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-id-badge"></i><span>Site Bilgileri
                                     </span></a>
                                 <ul class="collapse">
-                                <li class=""><a href="index.php">Genel Bilgiler</a></li>   
-                                <li class=""><a href="index.php">Meta Etiketleri</a></li>
+                                <li <?php if($page_id==3){ echo 'class="active"';} ?>><a href="genel-bilgiler.php?pg=3">Genel Bilgiler</a></li>   
+                                <li <?php if($page_id==4){ echo 'class="active"';} ?>><a href="meta.php?pg=4">Meta Etiketleri</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <li <?php if($page_id>=5 && $page_id<=11){ echo 'class="active"';} ?>>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-grid2"></i><span>Bölümler
                                     </span></a>
                                 <ul class="collapse">
-                                <li class=""><a href="ust-kisim.php">Üst Kısım</a></li>
-                                <li class=""><a href="giris.php">Giriş</a></li>
-                                <li class=""><a href="urunler.php">Ürünler</a></li>
-                                <li class=""><a href="index.php">Galeri</a></li>
-                                <li class=""><a href="index.php">Blog</a></li>
-                                <li class=""><a href="index.php">İletişim</a></li>
-                                <li class=""><a href="index.php">Alt Kısım</a></li>
+                                <li <?php if($page_id==5){ echo 'class="active"';} ?>><a href="ust-kisim.php?pg=5">Üst Kısım</a></li>
+                                <li <?php if($page_id==6){ echo 'class="active"';} ?>><a href="giris.php?pg=6">Giriş</a></li>
+                                <li <?php if($page_id==7){ echo 'class="active"';} ?>><a href="urunler.php?pg=7">Ürünler</a></li>
+                                <li <?php if($page_id==8){ echo 'class="active"';} ?>><a href="galeri.php?pg=8">Galeri</a></li>
+                                <li <?php if($page_id==9){ echo 'class="active"';} ?>><a href="blog.php?pg=9">Blog</a></li>
+                                <li <?php if($page_id==10){ echo 'class="active"';} ?>><a href="iletisim.php?pg=10">İletişim</a></li>
+                                <li <?php if($page_id==11){ echo 'class="active"';} ?>><a href="alt-kisim.php?pg=11">Alt Kısım</a></li>
                                 </ul>
                             </li>
                             <li>
