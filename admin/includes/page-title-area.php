@@ -1,13 +1,19 @@
- <?php ?>
+ <?php 
+    $bcsorgu=$db->prepare("SELECT * FROM breadcrumb WHERE bc_pg=:pg");
+    $bcsorgu->execute(array(
+        'pg' => $page_id
+        ));
+    $bccek=$bcsorgu->fetch(PDO::FETCH_ASSOC);
+ ?>
  <!-- page title area start -->
  <div class="page-title-area">
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Anasayfa</h4>
+                            <h4 class="page-title pull-left"><?php echo $bccek['bc_adi']; ?></h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="index.html">Kontrol Paneli</a></li>
-                                <li><span>Anasayfa</span></li>
+                                <li><a href="#"><?php echo $bccek['bc_ust']; ?></a></li>
+                                <li><span><?php echo $bccek['bc_adi']; ?></span></li>
                             </ul>
                         </div>
                     </div>

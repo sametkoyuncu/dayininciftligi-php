@@ -35,7 +35,7 @@ Sayfa id'leri
                                 </ul>
                             </li>
                             <li <?php if($page_id>=5 && $page_id<=11){ echo 'class="active"';} ?>>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-grid2"></i><span>Bölümler
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-grid2"></i><span>Anasayfa Bölümleri
                                     </span></a>
                                 <ul class="collapse">
                                 <li <?php if($page_id==5){ echo 'class="active"';} ?>><a href="ust-kisim.php?pg=5">Üst Kısım</a></li>
@@ -65,7 +65,7 @@ Sayfa id'leri
                                 </ul>
                             </li>-->
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-book"></i><span>Yazılar
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-book"></i><span>Blog Yazıları
                                     </span></a>
                                 <ul class="collapse">
                                 <li class=""><a href="index.php">Tüm Yazılar</a></li>
@@ -75,7 +75,7 @@ Sayfa id'leri
                                 </ul>
                             </li>
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-image"></i><span>Galeri
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-image"></i><span>Galeri Görselleri
                                     </span></a>
                                 <ul class="collapse">
                                 <li class=""><a href="index.php">Tüm Görseller</a></li>

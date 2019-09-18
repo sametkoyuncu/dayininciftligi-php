@@ -3,18 +3,60 @@
 <?php include "includes/header-area.php"; ?>
 <?php include "includes/page-title-area.php"; ?>
 <?php 
+    $bolumsorgu=$db->prepare("SELECT * FROM bolumler WHERE bolum_adi=:adi");
+    $bolumsorgu->execute(array(
+        'adi' => 'urunler'
+        ));
+    $bolumcek=$bolumsorgu->fetch(PDO::FETCH_ASSOC);
+
     $urunsorgu=$db->prepare("SELECT * FROM urunler WHERE sorgu_id=:id ORDER BY urun_sira");
     $urunsorgu->execute(array(
         'id' => 1
         ));
 ?>
             <div class="main-content-inner">
-             
+                 <!-- Textual inputs start -->
+            <div class="col-12 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="header-title">Ürünler Bölümü Ayarları</h4>
+                        <p class="text-muted font-14 mb-4">Bu kısımda, anasayfada gözüken 'ürünler bölümünü' düzenleyebilirsiniz.</p>
+                        <hr>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom01">Bölüm Sırası</label>
+                                <input class="form-control" type="text" value="<?php echo $bolumcek['bolum_sira']; ?>" id="example-text-input">
+                                    <div class="valid-feedback">
+                                       İyi gözüküyor!
+                                    </div>
+                            </div>  
+                            <div class="col-md-6 mb-3">
+                                <label class="col-form-label">Bölüm Görünürlüğü</label>
+                                <select class="custom-select">
+                                    <?php 
+                                    if($bolumcek['bolum_durum']=='1') { ?>
+                                    <option value="1">Göster</option>
+                                    <option value="0">Gizle</option>
+                                    <?php } else { ?> 
+                                    <option value="0">Gizle</option>
+                                    <option value="1">Göster</option>
+                                    <?php } ?>
+                                </select>
+                            </div>                   
+                        </div>
+                        <hr>
+                        <div class="col-auto text-right">
+                            <button type="submit" class="btn btn-rounded btn-primary">Kaydet</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Textual inputs end -->
                 <!-- Progress Table start -->
                 <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Ürünler Bölümü</h4>
+                                <h4 class="header-title">Kayıtlı Ürünler</h4>
                                 <p class="text-muted font-14 mb-4">Bu sayfada, sitede bulunan ürünler bölümünü düzenleyebilirsiniz. İster yeni ürün ekleyin, ister bazı bilgileri değiştirin, isterseniz ürün silin, isterseniz de bu bölümü gizleyin.</p>
                                 <div class="single-table">
                                     <div class="table-responsive">
@@ -63,7 +105,6 @@
                     </div>
                     <!-- Progress Table end -->
             </div>
-        </div>
         <!-- main content area end -->
         <!-- footer area start-->
         <?php include "includes/footer.php"; ?>

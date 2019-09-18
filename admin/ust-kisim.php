@@ -62,7 +62,6 @@
                         </div>
                     </div>
                     <!-- Progress Table end -->
-            </div>
         </div>
         <!-- main content area end -->
         <!-- footer area start-->
