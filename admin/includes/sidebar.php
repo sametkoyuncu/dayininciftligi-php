@@ -65,21 +65,13 @@ Sayfa id'leri
                                 </ul>
                             </li>-->
                             <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-book"></i><span>Blog Yazıları
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-book"></i><span>Yazılar
                                     </span></a>
                                 <ul class="collapse">
                                 <li class=""><a href="index.php">Tüm Yazılar</a></li>
                                 <li class=""><a href="index.php">Yeni Ekle</a></li>
                                 <li class=""><a href="index.php">Kategoriler</a></li>
                                 <li class=""><a href="index.php">Etiketler</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-image"></i><span>Galeri Görselleri
-                                    </span></a>
-                                <ul class="collapse">
-                                <li class=""><a href="index.php">Tüm Görseller</a></li>
-                                <li class=""><a href="index.php">Yeni Ekle</a></li>
                                 </ul>
                             </li>
                             <li>
