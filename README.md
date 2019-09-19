@@ -5,14 +5,11 @@
 - bölümler kısmında her bir bölüm için sıra seçme eklenecek, veritabanında ilgili 'bolumler' tablosu var
 - anasayfadaki bölümler bilgileri 'bolumler' tablosundan çekmiyor gibi
 - breadcrumb düzenlendi, veritabanına eksik sayfaların bilgileri girilecek
-- genel ayarlarda olacaklar
--- logo
--- favicon
--- görünen site başlığı
-- meta da olacaklar
--- meta_title
--- meta_keywords
--- meta_description
--- meta_author
--- meta_owner
--- meta_copyright
+-genel ayarlar, upload eklenmeli
+- footer
+-- 1. bölüm <başlık><metin><görsel>
+-- 2. bölüm iletişim bilgileri v den çekilecek
+-- 3. bölüm bağlantılar üst-menülerden çekilecek
+-- 4. bölüm <başlık><metin><placeholder><onfocus><onholder>
+-- en alt sol copyright + admin paneli gibi ikon
+-- en alt sağ sosyal ağlar <facebook><instagram><youtube> 

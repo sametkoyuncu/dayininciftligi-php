@@ -27,11 +27,11 @@ Sayfa id'leri
                             </li>
                             <hr style="border:0.5px solid darkslategrey">
                             <li <?php if($page_id==3 || $page_id==4){ echo 'class="active"';} ?>>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-id-badge"></i><span>Site Bilgileri
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-id-badge"></i><span>Site Ayarları
                                     </span></a>
                                 <ul class="collapse">
-                                <li <?php if($page_id==3){ echo 'class="active"';} ?>><a href="genel-bilgiler.php?pg=3">Genel Bilgiler</a></li>   
-                                <li <?php if($page_id==4){ echo 'class="active"';} ?>><a href="meta.php?pg=4">Meta Etiketleri</a></li>
+                                <li <?php if($page_id==3){ echo 'class="active"';} ?>><a href="site-genel-ayarlar.php?pg=3">Genel Ayarlar</a></li>   
+                                <li <?php if($page_id==4){ echo 'class="active"';} ?>><a href="#">Pasif</a></li>
                                 </ul>
                             </li>
                             <li <?php if($page_id>=5 && $page_id<=11){ echo 'class="active"';} ?>>
