@@ -46,7 +46,7 @@
                         </div>
                         <hr>
                         <div class="col-auto text-right">
-                            <button type="submit" class="btn btn-rounded btn-primary">Kaydet</button>
+                            <button type="submit" class="btn btn-rounded btn-kaydet">Kaydet</button>
                         </div>
                     </div>
                 </div>
@@ -56,15 +56,22 @@
                 <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Kayıtlı Ürünler</h4>
+                                <div class="row">
+                                    <div class="col">
+                                        <h4 class="header-title">Kayıtlı Ürünler</h4>
+                                    </div>
+                                    <div class="col text-right">
+                                        <button type="button" class="btn btn-rounded btn-yeniekle btn-xs"><i class="ti-plus"></i> &nbsp;Yeni Ekle</button>
+                                    </div>
+                                </div>
                                 <p class="text-muted font-14 mb-4">Bu sayfada, sitede bulunan ürünler bölümünü düzenleyebilirsiniz. İster yeni ürün ekleyin, ister bazı bilgileri değiştirin, isterseniz ürün silin, isterseniz de bu bölümü gizleyin.</p>
                                 <div class="single-table">
                                     <div class="table-responsive">
                                         <table class="table table-hover progress-table text-center">
-                                            <thead class="text-uppercase">
+                                            <thead class="text-uppercase bg-mor">
                                                 <tr>
                                                     <th scope="col">Sırası</th>
-                                                    <th scope="col">Adı</th>
+                                                    <th class="text-left" scope="col">Adı</th>
                                                     <th scope="col">Görsel</th>
                                                     <th scope="col">Durum</th>
                                                     <th scope="col">Ayarlar</th>
@@ -75,14 +82,14 @@
                                                 <?php while ($uruncek=$urunsorgu->fetch(PDO::FETCH_ASSOC)) { ?>
                                                 <tr>
                                                     <th scope="row"><?php echo $uruncek['urun_sira']; ?></th>
-                                                    <td><?php echo $uruncek['urun_adi']; ?></td>
+                                                    <td class="text-left"><?php echo $uruncek['urun_adi']; ?></td>
                                                     <td><img src="../<?php echo $uruncek['urun_adresi']; ?>" alt="<?php echo $uruncek['urun_alt']; ?>"></td>
                                                     <td>
                                                     <?php 
                                                         if($uruncek['urun_durum']=='1'){?>
-                                                        <span class="status-p bg-success">Görünür</span>
+                                                        <span class="status-p bg-yesil">Görünür</span>
                                                         <?php }else{?>
-                                                        <span class="status-p bg-danger">Gizli</span>
+                                                        <span class="status-p bg-kirmizi">Gizli</span>
                                                         <?php }
                                                     ?>
                                                         

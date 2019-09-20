@@ -17,108 +17,93 @@
 ?>
         <div class="main-content-inner">
              
-            <!-- Textual inputs start -->
+            <!-- 1. bölüm start -->
             <div class="col-12 mt-5">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="header-title">Genel Ayarlar</h4>
-                        <p class="text-muted font-14 mb-4">Bu kısımda sitenin genel ayarlarını düzenleyebilirsiniz.</p>
+                        <h4 class="header-title">1. Bölüm - Hakkımızda Özet</h4>
+                        <p class="text-muted font-14 mb-4">Bu kısımda sitenin alt kısmında bulunan 1. (en soldaki) bölümü düzenleyebilirsiniz.</p>
                         <hr>
                         <div class="form-row">
-                            <div class="col-md-1 mb-3">
-                                <img src="../<?php echo $ayarcek['ayar_sitefavicon']; ?>" alt="" width="75px" style="background-color:darkslateblue; padding: 5px;">
-                            </div> 
-                            <div class="col-md-4 mb-3">
-                                <label for="validationCustom01">Favicon Adresi</label>
-                                <input class="form-control" type="text" value="<?php echo $ayarcek['ayar_sitefavicon']; ?>" id="example-text-input">
-                                    <div class="valid-feedback">
-                                       İyi gözüküyor!
-                                    </div>
+                            <div class="col-md-4 text-center">
+                                <img src="assets/images/footer/1.png" class="rounded" alt="">
                             </div>
-                            <div class="col-md-2 mb-3">
-                                <img src="../<?php echo $ayarcek['ayar_sitelogo']; ?>" alt="" style="background-color:darkslateblue; padding: 22px;">
-                            </div> 
-                            <div class="col-md-5 mb-3">
-                                <label for="validationCustom01">Logo Adresi</label>
-                                <input class="form-control" type="text" value="<?php echo $ayarcek['ayar_sitelogo']; ?>" id="example-text-input">
-                                    <div class="valid-feedback">
-                                       İyi gözüküyor!
-                                    </div>
-                            </div>         
+                            <div class="col-md-8">
+                                <div class="col-md-12 mb-3">
+                                    <label for="validationCustom01">Başlık</label>
+                                    <input class="form-control" type="text" value="<?php echo $ayarcek['ayar_sitelogo']; ?>" id="example-text-input">
+                                        <div class="valid-feedback">
+                                        İyi gözüküyor!
+                                        </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="validationCustom01">Metin</label>
+                                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                                        <div class="valid-feedback">
+                                        İyi gözüküyor!
+                                        </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="validationCustom01">Görsel Adresi</label>
+                                    <input class="form-control" type="text" value="<?php echo $ayarcek['ayar_sitelogo']; ?>" id="example-text-input">
+                                        <div class="valid-feedback">
+                                        İyi gözüküyor!
+                                        </div>
+                                </div>
+                            </div>  
                         </div>
                         <hr>
                         <div class="col-auto text-right">
-                            <button type="submit" class="btn btn-rounded btn-primary">Kaydet</button>
+                            <button type="submit" class="btn btn-rounded btn-kaydet">Kaydet</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Textual inputs end -->
-            <!-- Textual inputs start -->
+            <!-- 1. bölüm end -->
+            <!-- 4. bölüm start -->
             <div class="col-12 mt-5">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="header-title">Meta Etiketleri</h4>
-                        <p class="text-muted font-14 mb-4">Bu kısımda meta etiketlerinizi düzenleyebilirsiniz.</p>
+                        <h4 class="header-title">4. Bölüm - Abone Kayıt</h4>
+                        <p class="text-muted font-14 mb-4">Bu kısımda sitenin alt kısmında bulunan 1. (en soldaki) bölümü düzenleyebilirsiniz.</p>
                         <hr>
                         <div class="form-row">
-                            <div class="col-md-6 mb-3">
-                                <label for="validationCustom01">Meta Title</label>
-                                <input class="form-control" type="text" value="<?php echo $ayarcek['meta_title']; ?>" id="example-text-input">
-                                    <div class="valid-feedback">
-                                       İyi gözüküyor!
-                                    </div>
+                            <div class="col-md-4 text-center">
+                                <img src="assets/images/footer/4.png" class="rounded" alt="">
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="validationCustom01">Meta Copyright</label>
-                                <input class="form-control" type="text" value="<?php echo $ayarcek['meta_copyright']; ?>" id="example-text-input">
-                                    <div class="valid-feedback">
-                                       İyi gözüküyor!
-                                    </div>
-                            </div>                   
-                        </div>
-                        <div class="form-row">
-                            <div class="col-md-6 mb-3">
-                                <label for="validationCustom01">Meta Author</label>
-                                <input class="form-control" type="text" value="<?php echo $ayarcek['meta_author']; ?>" id="example-text-input">
-                                    <div class="valid-feedback">
-                                       İyi gözüküyor!
-                                    </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="validationCustom01">Meta Owner</label>
-                                <input class="form-control" type="text" value="<?php echo $ayarcek['meta_owner']; ?>" id="example-text-input">
-                                    <div class="valid-feedback">
-                                       İyi gözüküyor!
-                                    </div>
-                            </div>                   
-                        </div>
-                        <div class="form-row">
-                            <div class="col-md-12 mb-3">
-                                <label for="validationCustom01">Meta Keywords</label>
-                                <input class="form-control" type="text" value="<?php echo $ayarcek['meta_keywords']; ?>" id="example-text-input">
-                                    <div class="valid-feedback">
-                                       İyi gözüküyor!
-                                    </div>
-                            </div>                   
-                        </div>
-                        <div class="form-row">
-                            <div class="col-md-12 mb-3">
-                                <label for="validationCustom01">Meta Description</label>
-                                <input class="form-control" type="text" value="<?php echo $ayarcek['meta_description']; ?>" id="example-text-input">
-                                    <div class="valid-feedback">
-                                       İyi gözüküyor!
-                                    </div>
-                            </div>                   
+                            <div class="col-md-8">
+                                <div class="col-md-12 mb-3">
+                                    <label for="validationCustom01">Başlık</label>
+                                    <input class="form-control" type="text" value="<?php echo $ayarcek['ayar_sitelogo']; ?>" id="example-text-input">
+                                        <div class="valid-feedback">
+                                        İyi gözüküyor!
+                                        </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="validationCustom01">Metin</label>
+                                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                                        <div class="valid-feedback">
+                                        İyi gözüküyor!
+                                        </div>
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="validationCustom01">Giriş Alanı Metni</label>
+                                    <input class="form-control" type="text" value="<?php echo $ayarcek['ayar_sitelogo']; ?>" id="example-text-input">
+                                        <div class="valid-feedback">
+                                        İyi gözüküyor!
+                                        </div>
+                                </div>
+                            </div>  
                         </div>
                         <hr>
                         <div class="col-auto text-right">
-                            <button type="submit" class="btn btn-rounded btn-primary">Kaydet</button>
+                            <button type="submit" class="btn btn-rounded btn-kaydet">Kaydet</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Textual inputs end -->
+            <!-- 1. bölüm end -->
+          
             
             
             

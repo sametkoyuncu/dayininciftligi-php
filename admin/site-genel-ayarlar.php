@@ -24,30 +24,32 @@
                         <p class="text-muted font-14 mb-4">Bu kısımda sitenin genel ayarlarını düzenleyebilirsiniz.</p>
                         <hr>
                         <div class="form-row">
-                            <div class="col-md-1 mb-3">
-                                <img src="../<?php echo $ayarcek['ayar_sitefavicon']; ?>" alt="" width="75px" style="background-color:darkslateblue; padding: 5px;">
+                            <div class="col-md-3 mb-3 text-center">
+                                <img class="rounded-circle" src="../<?php echo $ayarcek['ayar_sitefavicon']; ?>" alt="" width="75px" style="background-color:darkslateblue; padding: 7px;">
                             </div> 
-                            <div class="col-md-4 mb-3">
+                            <div class="col-md-9 mb-3">
                                 <label for="validationCustom01">Favicon Adresi</label>
                                 <input class="form-control" type="text" value="<?php echo $ayarcek['ayar_sitefavicon']; ?>" id="example-text-input">
                                     <div class="valid-feedback">
                                        İyi gözüküyor!
                                     </div>
-                            </div>
-                            <div class="col-md-2 mb-3">
-                                <img src="../<?php echo $ayarcek['ayar_sitelogo']; ?>" alt="" style="background-color:darkslateblue; padding: 22px;">
+                            </div>         
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-3 mb-3 text-center">
+                                <img class="rounded" src="../<?php echo $ayarcek['ayar_sitelogo']; ?>" alt="" width="200px" height="auto" style="background-color:darkslateblue; padding: 10px;">
                             </div> 
-                            <div class="col-md-5 mb-3">
+                            <div class="col-md-9 mb-3">
                                 <label for="validationCustom01">Logo Adresi</label>
                                 <input class="form-control" type="text" value="<?php echo $ayarcek['ayar_sitelogo']; ?>" id="example-text-input">
                                     <div class="valid-feedback">
                                        İyi gözüküyor!
                                     </div>
-                            </div>         
+                            </div>
                         </div>
                         <hr>
                         <div class="col-auto text-right">
-                            <button type="submit" class="btn btn-rounded btn-primary">Kaydet</button>
+                            <button type="submit" class="btn btn-rounded btn-kaydet">Kaydet</button>
                         </div>
                     </div>
                 </div>
@@ -57,14 +59,19 @@
             <div class="col-12 mt-5">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="header-title">Sosyal Medya Hesaplarınız&nbsp;&nbsp;
-                            <button type="button" class="btn btn-rounded btn-info btn-xs"><i class="ti-plus"></i> &nbsp;Yeni Ekle</button>
-                        </h4>
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="header-title">Sosyal Medya Hesaplarınız&nbsp;&nbsp;</h4>
+                            </div>
+                            <div class="col text-right">
+                                <button type="button" class="btn btn-rounded btn-yeniekle btn-xs"><i class="ti-plus"></i> &nbsp;Yeni Ekle</button>
+                            </div>
+                        </div>
                         <p class="text-muted font-14 mb-4">Bu kısımda, sosyal medya hesaplarınızı siteye ekleyebilir, veya varolan hesaplarınızı düzenleyebilirsiniz.</p>
                         <div class="single-table">
                             <div class="table-responsive">
                                 <table class="table table-hover progress-table text-left">
-                                    <thead class="text-uppercase">
+                                    <thead class="text-uppercase bg-mor">
                                         <tr>
                                             <th scope="col">Sıra</th>
                                             <th scope="col">İkon</th>
@@ -157,7 +164,7 @@
                         </div>
                         <hr>
                         <div class="col-auto text-right">
-                            <button type="submit" class="btn btn-rounded btn-primary">Kaydet</button>
+                            <button type="submit" class="btn btn-rounded btn-kaydet">Kaydet</button>
                         </div>
                     </div>
                 </div>

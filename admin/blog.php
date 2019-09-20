@@ -65,7 +65,7 @@
                         </div>
                         <hr>
                         <div class="col-auto text-right">
-                            <button type="submit" class="btn btn-rounded btn-primary">Kaydet</button>
+                            <button type="submit" class="btn btn-rounded btn-kaydet">Kaydet</button>
                         </div>
                     </div>
                 </div>

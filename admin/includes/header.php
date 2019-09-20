@@ -17,7 +17,11 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Dayının Çiftliği | Admin Paneli</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="../assets/images/icon/favicon.png">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../<?php echo $ayarcek['ayar_sitefavicon']; ?>">
+    <link rel="apple-touch-icon" href="../<?php echo $ayarcek['ayar_sitefavicon']; ?>">
+
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/themify-icons.css">
@@ -33,4 +37,6 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <!-- modernizr css -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- sonradan eklenenler css -->
+    <link rel="stylesheet" href="assets/css/zlast.css">
 </head>

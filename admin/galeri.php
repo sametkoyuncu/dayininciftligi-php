@@ -70,7 +70,7 @@
                         </div>
                         <hr>
                         <div class="col-auto text-right">
-                            <button type="submit" class="btn btn-rounded btn-primary">Kaydet</button>
+                            <button type="submit" class="btn btn-rounded btn-kaydet">Kaydet</button>
                         </div>
                     </div>
                 </div>
@@ -80,14 +80,20 @@
             <div class="col-12 mt-5">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="header-title">Galerideki Fotoğraflar&nbsp;&nbsp;
-                                <button type="button" class="btn btn-rounded btn-info btn-xs"><i class="ti-plus"></i> &nbsp;Yeni Ekle</button>
-                        </h4>
-                        <p class="text-muted font-14 mb-4">Bu kısımda, galeride bulunan fotoğrafları düzenleyebilirsiniz. İster yeni fotoğraf ekleyin, ister bazı bilgileri değiştirin, isterseniz fotoğraf silin, isterseniz de fotoğraf gizleyin.</p>
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="header-title">Fotoğraflar</h4>
+                            </div>
+                            <div class="col text-right">
+                                <button type="button" class="btn btn-rounded btn-yeniekle btn-xs"><i class="ti-plus"></i> &nbsp;Yeni Ekle</button>
+                            </div>
+                        </div>
+                        <p class="text-muted font-14">Bu kısımda, galeride bulunan fotoğrafları düzenleyebilirsiniz. İster yeni fotoğraf ekleyin, ister bazı bilgileri değiştirin, isterseniz fotoğraf silin, isterseniz de fotoğraf gizleyin.</p>
+                        <br>
                         <div class="single-table">
                             <div class="table-responsive">
                                 <table class="table table-hover progress-table text-center">
-                                    <thead class="text-uppercase">
+                                    <thead class="text-uppercase bg-mor">
                                         <tr>
                                             <th scope="col">Sıra</th>
                                             <th scope="col">Görsel</th>
@@ -100,13 +106,13 @@
                                         <?php while ($fotocek=$fotosorgu->fetch(PDO::FETCH_ASSOC)) { ?>
                                         <tr>
                                             <th scope="row"><?php echo $sayac; ?></th>
-                                            <td><img src="../<?php echo $fotocek['gorsel_adresi']; ?>" alt="<?php echo $fotocek['gorsel_alt']; ?>"></td>
+                                            <td><img src="../<?php echo $fotocek['gorsel_adresi']; ?>" alt="<?php echo $fotocek['gorsel_alt']; ?>" width="150px" height="auto"></td>
                                             <td>
                                             <?php 
                                                 if($fotocek['gorsel_durum']=='1'){?>
-                                                <span class="status-p bg-success">Görünür</span>
+                                                <span class="status-p bg-yesil">Görünür</span>
                                                 <?php }else{?>
-                                                <span class="status-p bg-danger">Gizli</span>
+                                                <span class="status-p bg-kirmizi">Gizli</span>
                                                 <?php }
                                             ?>                                        
                                             </td>

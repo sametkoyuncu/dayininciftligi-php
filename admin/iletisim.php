@@ -48,7 +48,7 @@
                         </div>
                         <hr>
                         <div class="col-auto text-right">
-                            <button type="submit" class="btn btn-rounded btn-primary">Kaydet</button>
+                            <button type="submit" class="btn btn-rounded btn-kaydet">Kaydet</button>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01">Adres</label>
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i class="ti-home"></i></span>
+                                    <span class="input-group-text bg-mor" id="basic-addon1"><i class="ti-home"></i></span>
                                     <input class="form-control" type="text" value="<?php echo $iletisimcek['iletisim_adres']; ?>" id="example-text-input">
                                     <div class="valid-feedback">
                                        İyi gözüküyor!
@@ -75,7 +75,7 @@
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01">Google Maps Bağlantısı</label>
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i class="ti-location-pin"></i></span>
+                                    <span class="input-group-text bg-mor" id="basic-addon1"><i class="ti-location-pin"></i></span>
                                     <input class="form-control" type="text" value="<?php echo $iletisimcek['iletisim_adres_url']; ?>" id="example-text-input">
                                     <div class="valid-feedback">
                                        İyi gözüküyor!
@@ -87,7 +87,7 @@
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01">Telefon Numarası</label>
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i class="ti-mobile"></i></span>
+                                    <span class="input-group-text bg-mor" id="basic-addon1"><i class="ti-mobile"></i></span>
                                     <input class="form-control" type="text" value="<?php echo $iletisimcek['iletisim_telefon']; ?>" id="example-text-input">
                                     <div class="valid-feedback">
                                        İyi gözüküyor!
@@ -98,7 +98,7 @@
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01">E-posta Adresi</label>
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i class="ti-email"></i></span>
+                                    <span class="input-group-text bg-mor" id="basic-addon1"><i class="ti-email"></i></span>
                                     <input class="form-control" type="text" value="<?php echo $iletisimcek['iletisim_eposta']; ?>" id="example-text-input">
                                     <div class="valid-feedback">
                                        İyi gözüküyor!
@@ -110,7 +110,7 @@
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01">Facebook Kullanıcı Adı</label>
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i class="ti-facebook"></i></span>
+                                    <span class="input-group-text bg-mor" id="basic-addon1"><i class="ti-facebook"></i></span>
                                     <input class="form-control" type="text" value="<?php echo $iletisimcek['iletisim_facebook']; ?>" id="example-text-input">
                                     <div class="valid-feedback">
                                        İyi gözüküyor!
@@ -120,7 +120,7 @@
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01">İnstagram Kullanıcı Adı</label>
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i class="ti-instagram"></i></span>
+                                    <span class="input-group-text bg-mor" id="basic-addon1"><i class="ti-instagram"></i></span>
                                     <input class="form-control" type="text" value="<?php echo $iletisimcek['iletisim_instagram']; ?>" id="example-text-input">
                                     <div class="valid-feedback">
                                        İyi gözüküyor!
@@ -130,7 +130,7 @@
                         </div>
                         <hr>
                         <div class="col-auto text-right">
-                            <button type="submit" class="btn btn-rounded btn-primary">Kaydet</button>
+                            <button type="submit" class="btn btn-rounded btn-kaydet">Kaydet</button>
                         </div>
                     </div>
                 </div>

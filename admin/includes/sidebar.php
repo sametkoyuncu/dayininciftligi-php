@@ -7,7 +7,7 @@ Sayfa id'leri
 */
 ?>
 <div class="sidebar-menu">
-            <div class="sidebar-header">
+            <div class="sidebar-header bg-mor">
                 <div class="logo">
                     <a href="index.html"><img src="assets/images/icon/logo.png" alt="logo"></a>
                 </div>
@@ -26,13 +26,8 @@ Sayfa id'leri
                                 </ul>
                             </li>
                             <hr style="border:0.5px solid darkslategrey">
-                            <li <?php if($page_id==3 || $page_id==4){ echo 'class="active"';} ?>>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-id-badge"></i><span>Site Ayarları
-                                    </span></a>
-                                <ul class="collapse">
-                                <li <?php if($page_id==3){ echo 'class="active"';} ?>><a href="site-genel-ayarlar.php?pg=3">Genel Ayarlar</a></li>   
-                                <li <?php if($page_id==4){ echo 'class="active"';} ?>><a href="#">Pasif</a></li>
-                                </ul>
+                            <li <?php if($page_id==3){ echo 'class="active"';} ?>>
+                                <a href="site-genel-ayarlar.php?pg=3"><i class="ti-settings"></i><span>Genel Ayarlar</span></a>
                             </li>
                             <li <?php if($page_id>=5 && $page_id<=11){ echo 'class="active"';} ?>>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-grid2"></i><span>Anasayfa Bölümleri
