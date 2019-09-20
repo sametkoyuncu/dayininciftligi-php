@@ -13,3 +13,4 @@
     - 4. bölüm > başlık metin placeholder onfocus onholder ikon
     - en alt sol > copyright + admin paneli gibi ikon
     - en alt sağ > sosyal ağlar facebook instagram youtube
+- tam ekran hatası - tam ekrandayken başka sayfaya geçtiğinde tam ekrandan çıkıyor

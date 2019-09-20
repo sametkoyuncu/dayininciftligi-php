@@ -8,15 +8,16 @@
         'id' => 1
         ));
     $ayarcek=$ayarsorgu->fetch(PDO::FETCH_ASSOC);
-    
-    $sosyalmedyasorgu=$db->prepare("SELECT * FROM sosyal_medya WHERE sorgu_id=:id");
-    $sosyalmedyasorgu->execute(array(
+
+    $iletisimsorgu=$db->prepare("SELECT * FROM iletisim WHERE iletisim_id=:id");
+    $iletisimsorgu->execute(array(
         'id' => 1
         ));
+    $iletisimcek=$iletisimsorgu->fetch(PDO::FETCH_ASSOC);
 ?>
         <div class="main-content-inner">
              
-            <!-- genel ayarlar start -->
+            <!-- Textual inputs start -->
             <div class="col-12 mt-5">
                 <div class="card">
                     <div class="card-body">
@@ -52,53 +53,8 @@
                     </div>
                 </div>
             </div>
-            <!-- genel ayarlar end -->
-            <!-- sosyal medya start -->
-            <div class="col-12 mt-5">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="header-title">Sosyal Medya Hesaplarınız&nbsp;&nbsp;
-                            <button type="button" class="btn btn-rounded btn-info btn-xs"><i class="ti-plus"></i> &nbsp;Yeni Ekle</button>
-                        </h4>
-                        <p class="text-muted font-14 mb-4">Bu kısımda, sosyal medya hesaplarınızı siteye ekleyebilir, veya varolan hesaplarınızı düzenleyebilirsiniz.</p>
-                        <div class="single-table">
-                            <div class="table-responsive">
-                                <table class="table table-hover progress-table text-left">
-                                    <thead class="text-uppercase">
-                                        <tr>
-                                            <th scope="col">Sıra</th>
-                                            <th scope="col">İkon</th>
-                                            <th scope="col">Adı</th>
-                                            <th scope="col">Bağlantı Adresi</th>
-                                            <th scope="col">Ayarlar</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php $sayac=1; ?>
-                                        <?php while ($sosyalmedyacek=$sosyalmedyasorgu->fetch(PDO::FETCH_ASSOC)) { ?>
-                                        <tr>
-                                            <th scope="row"><?php echo $sayac; ?></th>
-                                            <td><i class="<?php echo $sosyalmedyacek['sosyal_medya_ikon']; ?>"></i></td>
-                                            <td><?php echo $sosyalmedyacek['sosyal_medya_adi']; ?></td>
-                                            <td><a href="<?php echo $sosyalmedyacek['sosyal_medya_url']; ?>" target="_blank"><?php echo $sosyalmedyacek['sosyal_medya_url']; ?></a></td>
-                                            <td>
-                                                <ul class="d-flex justify-content-center">
-                                                    <li class="mr-3"><a href="#" class="text-secondary" title="Düzenle"><i class="fa fa-edit"></i></a></li>
-                                                    <li><a href="#" class="text-danger" title="Sil"><i class="ti-trash"></i></a></li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <?php $sayac++; ?>
-                                        <?php } ?> <!-- while end -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- sosyal medya end -->
-            <!-- meta etiketleri start -->
+            <!-- Textual inputs end -->
+            <!-- Textual inputs start -->
             <div class="col-12 mt-5">
                 <div class="card">
                     <div class="card-body">
@@ -162,8 +118,8 @@
                     </div>
                 </div>
             </div>
-            <!-- meta etiketleri end -->
-             
+            <!-- Textual inputs end -->
+            
             
             
         </div>
