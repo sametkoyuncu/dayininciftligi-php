@@ -6,10 +6,17 @@ Sayfa id'leri
 11 alt kısım     |  12
 */
 ?>
+<?php
+$ayarsorgu=$db->prepare("SELECT * FROM ayarlar WHERE ayar_id=:id");
+$ayarsorgu->execute(array(
+    'id' => 1
+    ));
+$ayarcek=$ayarsorgu->fetch(PDO::FETCH_ASSOC);
+?>
 <div class="sidebar-menu">
             <div class="sidebar-header bg-mor">
                 <div class="logo">
-                    <a href="index.html"><img src="assets/images/icon/logo.png" alt="logo"></a>
+                    <a href="index.html"><img src="<?php echo $ayarcek['ayar_sitelogo']; ?>" alt="logo"></a>
                 </div>
             </div>
             <div class="main-menu">

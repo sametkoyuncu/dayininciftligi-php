@@ -14,3 +14,4 @@
     - en alt sol > copyright + admin paneli gibi ikon
     - en alt sağ > sosyal ağlar facebook instagram youtube
 - tam ekran hatası - tam ekrandayken başka sayfaya geçtiğinde tam ekrandan çıkıyor
+- genel ayarlar kısmında logo veya favicon eklerken eski görseli silmiyor, unlink ekli ama kontrol edilmesi gerek

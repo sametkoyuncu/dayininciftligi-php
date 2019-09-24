@@ -33,15 +33,15 @@ $iletisimcek=$iletisimsorgu->fetch(PDO::FETCH_ASSOC);
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- meta tags -->
-    <meta name="title" content="Dayının Çiftliği" />
-    <meta name="description" content="Dayının Çiftliği İstanbul Şile'de kurbanlık, adaklık, süt, yumurta ve bahçe mahsülleri üretimi yapan bir aile işletmesidir.">
-    <meta name="keywords" content="kurbanlık, adaklık, süt, yumurta" />
-    <!--<meta name="author" content="SİTE YÖNETİCİSİ VE YAZARI" />-->
-    <!--<meta name="owner" content="SİTE SAHİBİ" />-->
-    <meta name="copyright" content="(c) 2018" />
+    <meta name="title" content="<?php echo $ayarcek['meta_title']; ?>" />
+    <meta name="description" content="<?php echo $ayarcek['meta_description']; ?>">
+    <meta name="keywords" content="<?php echo $ayarcek['meta_keywords']; ?>" />
+    <meta name="author" content="<?php echo $ayarcek['meta_author']; ?>" />
+    <meta name="owner" content="<?php echo $ayarcek['meta_owner']; ?>" />
+    <meta name="copyright" content="<?php echo $ayarcek['meta_copyright']; ?>" />
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo $ayarcek['ayar_sitefavicon']; ?>">
-    <link rel="apple-touch-icon" href="<?php echo $ayarcek['ayar_sitefavicon']; ?>">
+    <link rel="shortcut icon" type="image/x-icon" href="admin/<?php echo $ayarcek['ayar_sitefavicon']; ?>">
+    <link rel="apple-touch-icon" href="admin/<?php echo $ayarcek['ayar_sitefavicon']; ?>">
     <title><?php echo $ayarcek['meta_title']; ?></title>
 
     <!-- galeri css-->
