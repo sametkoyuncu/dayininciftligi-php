@@ -1,5 +1,32 @@
 <?php
-    include 'baglan.php'; 
+	include 'baglan.php'; 
+####################################################################################
+############					   bolum ayarları						############
+####################################################################################
+	#
+	#bölüm güncelle
+	#
+	#bölüm güncelleme çok sayıda sayfada olduğu için
+	#sayfa_url ve sayfa_no ları alıp ona göre header da kullandık
+	#
+	if (isset($_POST['bolumguncelle'])) {
+		$sayfa_url=$_POST['sayfa_url'];
+		$sayfa_no=$_POST['sayfa_no'];
+		$bolumguncelle=$db->prepare("UPDATE bolumler SET
+			bolum_sira=:sira,
+			bolum_durum=:durum
+			WHERE bolum_id=:id");
+		$guncelle=$bolumguncelle->execute(array(
+			'sira' => $_POST['bolum_sira'],
+			'durum' => $_POST['bolum_durum'],
+			'id' => $_POST['bolum_id']
+			));
+		if($guncelle) {
+			header("Location:$sayfa_url.php?pg=$sayfa_no&durum=true");
+		} else {
+			header("Location:$sayfa_url.php?pg=$sayfa_no&durum=false");
+		}
+	}
 ####################################################################################
 ############					   genel ayarlar						############
 ####################################################################################
