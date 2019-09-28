@@ -6,7 +6,7 @@ $girissorgu->execute(array(
     ));
 $giriscek=$girissorgu->fetch(PDO::FETCH_ASSOC);
 ?>
-<section class="home_banner_area" id="giris">
+<section class="home_banner_area" id="giris" style="background: url(<?php echo $giriscek['giris_arkaplan']; ?>) no-repeat scroll center center;">
         <div class="banner_inner d-flex align-items-center">
             <div class="overlay"></div>
             <div class="container">

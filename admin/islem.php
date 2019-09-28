@@ -242,7 +242,8 @@
 			$rastgelesayi3=rand(20000, 32000);
 			$rastgelesayi4=rand(20000, 32000);
 			$rastgelead=$rastgelesayi1.$rastgelesayi2.$rastgelesayi3.$rastgelesayi4;
-			$refgorselyolu=substr($yukleme_dizini, 0)."/".$rastgelead.$name;
+			$refgorselyolu=substr($yukleme_dizini, 3)."/".$rastgelead.$name;
+			#admin dizininde yüklenip asıl dizinde gösterildiği için ../ kısmını kestik
 			@move_uploaded_file($tmp_name, "$yukleme_dizini/$rastgelead$name");
 
 			$girisguncelle=$db->prepare("UPDATE giris SET

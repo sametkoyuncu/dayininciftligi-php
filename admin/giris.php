@@ -98,7 +98,7 @@
                                         </div>
                                         <div id="accordion41" class="collapse" data-parent="#accordion4">
                                             <div class="card-body">
-                                                <img src="<?php echo $giris_arkaplan; ?>" class="text-center" alt="">
+                                                <img src="../<?php echo $giris_arkaplan; ?>" class="text-center" alt="">
                                             </div>
                                         </div>
                                     </div>      
