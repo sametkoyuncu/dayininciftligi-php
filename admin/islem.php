@@ -233,7 +233,7 @@
 	#giriş bölümü bilgi güncelleme
 	#
 	if (isset($_POST['girisguncelle'])) {
-        if ($_FILES['giris_arkaplan']["size"] > 0) {
+       if ($_FILES['giris_arkaplan']["size"] > 0) {
 			$yukleme_dizini = '../assets/img/banner';
 			@$tmp_name = $_FILES['giris_arkaplan']["tmp_name"];
 			@$name = $_FILES['giris_arkaplan']["name"];
