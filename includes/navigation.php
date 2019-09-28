@@ -23,7 +23,7 @@ $navbarsorgu->execute(array(
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
                             <?php while ($navbarcek=$navbarsorgu->fetch(PDO::FETCH_ASSOC)) { ?>
-                                <li class="nav-item"><a class="nav-link" href="<?php echo $navbarcek['nav_url'];?>"><?php echo $navbarcek['nav_adi']; ?></a></li>
+                                <li class="nav-item"><a class="nav-link" href="<?php echo $navbarcek['nav_url'];?>"><!--<i class="ti ti-home"></i>&nbsp;--><?php echo $navbarcek['nav_adi']; ?></a></li>
                             <?php } ?>
                         </ul>
                     </div>

@@ -7,6 +7,7 @@ $sosyalmedyasorgu->execute(array(
   'id' => $_GET['sosyal_medya_id']
   ));
 $sosyalmedyacek=$sosyalmedyasorgu->fetch(PDO::FETCH_ASSOC);
+$sm_id=$sosyalmedyacek['sosyal_medya_id'];
 ?>
 <!-- sweet alert start-->
 <script src="assets/js/sweetalert.min.js"></script>
@@ -55,7 +56,7 @@ $sosyalmedyacek=$sosyalmedyasorgu->fetch(PDO::FETCH_ASSOC);
                                         <h4 class="header-title bej-yazi"><?php echo $sosyalmedyacek['sosyal_medya_adi']; ?> Hesabını Düzenle</h4>
                                     </div>
                                     <form action="islem.php" method="POST">
-                                    <input type="hidden" name="sosyal_medya_id" value="<?php echo $sosyalmedyacek['sosyal_medya_id']; ?>">
+                                    <input type="hidden" name="sosyal_medya_id" value="<?php echo $sm_id; ?>">
                                     <div class="card-body">
                                         <div class="col-md-12 mb-3">
                                             <label for="validationCustom01">Hesap Adı</label>
@@ -81,6 +82,7 @@ $sosyalmedyacek=$sosyalmedyasorgu->fetch(PDO::FETCH_ASSOC);
                                     </div>
                                     <div class="modal-footer bg-acik-gri">
                                         <button onClick="window.location.href='site-genel-ayarlar.php?pg=3#sosyalmedya'" type="button" class="btn btn-geri btn-rounded"><i class="ti-arrow-left"></i>&nbsp; Geri Dön</button>
+                                        <button onClick="window.location.href='islem.php?sosyalmedyasil=true&sosyal_medya_id=<?php echo $sm_id; ?>'" type="button" class="btn btn-kirmizi btn-rounded"><i class="ti ti-close"></i>&nbsp; Hesabı Sil</button>
                                         <button type="submit" name="sosyalmedyaguncelle" class="btn btn-kaydet btn-rounded"><i class="ti-check"></i>&nbsp; Kaydet</button>
                                     </div>
                                     </form>

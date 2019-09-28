@@ -57,7 +57,7 @@
                             <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
                                 <div class="thumb">
                                     <a href="#">
-                                        <img class="img-fluid" src="img/blog/prev.jpg" alt="">
+                                        <img class="img-fluid" src="assets/img/blog/prev.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class="arrow">
@@ -86,7 +86,7 @@
                                 </div>
                                 <div class="thumb">
                                     <a href="#">
-                                        <img class="img-fluid" src="img/blog/next.jpg" alt="">
+                                        <img class="img-fluid" src="assets/img/blog/next.jpg" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@
                         <div class="single-comment justify-content-between d-flex">
                             <div class="user justify-content-between d-flex">
                                 <div class="thumb">
-                                    <img src="img/blog/c1.png" alt="">
+                                    <img src="assets/img/blog/c1.png" alt="">
                                 </div>
                                 <div class="desc">
                                     <p class="comment">
@@ -141,7 +141,7 @@
                         <div class="single-comment justify-content-between d-flex">
                             <div class="user justify-content-between d-flex">
                                 <div class="thumb">
-                                    <img src="img/blog/c2.png" alt="">
+                                    <img src="assets/img/blog/c2.png" alt="">
                                 </div>
                                 <div class="desc">
                                     <p class="comment">
@@ -169,7 +169,7 @@
                         <div class="single-comment justify-content-between d-flex">
                             <div class="user justify-content-between d-flex">
                                 <div class="thumb">
-                                    <img src="img/blog/c3.png" alt="">
+                                    <img src="assets/img/blog/c3.png" alt="">
                                 </div>
                                 <div class="desc">
                                     <p class="comment">

@@ -18,7 +18,7 @@ $bolumlersorgu=$db->prepare("SELECT * FROM bolumler WHERE bolum_durum=:id");
 $bolumlersorgu->execute(array(
    'id' => 1
     ));
-    
+
 //iletişim bilgileri
 $iletisimsorgu=$db->prepare("SELECT * FROM iletisim WHERE iletisim_id=:id");
 $iletisimsorgu->execute(array(
@@ -46,24 +46,24 @@ $iletisimcek=$iletisimsorgu->fetch(PDO::FETCH_ASSOC);
 
     <!-- galeri css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
-    <link rel="stylesheet" href="css/gallery-grid.css">
+    <link rel="stylesheet" href="assets/css/gallery-grid.css">
 
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="vendors/animate-css/animate.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vendors/animate-css/animate.css">
 
     <!-- emoji css -->
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
     
 
     <!-- main css -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/mystyle.css">
 
     <style>
     html {

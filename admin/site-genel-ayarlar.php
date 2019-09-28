@@ -2,6 +2,7 @@
 <?php include "includes/header.php"; ?>
 <?php include "includes/header-area.php"; ?>
 <?php include "includes/page-title-area.php"; ?>
+<?php include "includes/alerts.php"; ?>
 <?php 
     $ayarsorgu=$db->prepare("SELECT * FROM ayarlar WHERE ayar_id=:id");
     $ayarsorgu->execute(array(
@@ -35,7 +36,7 @@
                     </div>
                     <div class="form-row mb-3 mx-2">
                         <label for="example-text-input" class="col-form-label">Hesap İkonu&nbsp;&nbsp;(<a class="mb-3" href="https://themify.me/themify-icons" target="_blank">İkonlara bakmak için tıklayınız</a>)</label>
-                        <input class="form-control" name="sosyal_medya_ikon" type="text" value="" placeholder="ti ti-ikon-bu" id="example-text-input">
+                        <input class="form-control" name="sosyal_medya_ikon" type="text" value="" placeholder="ti-ikon-adi" id="example-text-input">
                     </div>
                     <div class="form-row mb-1 ml-3">
                     
@@ -52,43 +53,8 @@
 <!-- basic modal end -->
 
 
-<!-- sweet alert start-->
-<script src="assets/js/sweetalert.min.js"></script>
-<?php 
-    if(isset($_GET['durum'])){
-        if($_GET['durum']=='true'){?>
-           <script>
-                swal("İşlem Başarılı", {
-                    icon: "success",
-                    buttons: false,
-                    timer: 3000,
-                });
-            </script>
-            <style>
-                .swal-overlay {
-                    background-color: rgba(148,252,19, 0.45);
-                }
-            </style>
-            <?php
-        }else{?>
-           <script>
-                swal("İşlem Başarısız, Lütfen Tekrar Deneyiniz", {
-                    icon: "warning",
-                    buttons: false,
-                    timer: 3000,
-                });
-            </script>
-            <style>
-                .swal-overlay {
-                    background-color: rgba(255,0,0, 0.45);
-                }
-            </style>
-            <?php
-        }
-    }
-?>
+
 <?php $ayar_id = $ayarcek['ayar_id']; ?>
-<!-- sweet alert end -->
         <div class="main-content-inner">
              
             <!-- genel ayarlar start -->
@@ -180,7 +146,7 @@
                                             <td><a href="<?php echo $sosyalmedyacek['sosyal_medya_url']; ?>" target="_blank"><?php echo $sosyalmedyacek['sosyal_medya_url']; ?></a></td>
                                             <td>
                                                 <ul class="d-flex justify-content-center">                                                  
-                                                    <li class="mr-3"><a href="sosyal-medya-duzenle.php?sosyal_medya_id=<?php echo $sosyalmedyacek['sosyal_medya_id']; ?>" class="text-secondary" title="Düzenle"><i class="fa fa-edit"></i></a></li>
+                                                    <li class="mr-3"><a href="sosyal-medya-duzenle.php?pg=3&sosyal_medya_id=<?php echo $sosyalmedyacek['sosyal_medya_id']; ?>" class="text-secondary" title="Düzenle"><i class="ti-pencil"></i></a></li>
                                                     <li><a href="islem.php?sosyalmedyasil=true&sosyal_medya_id=<?php echo $sosyalmedyacek['sosyal_medya_id']; ?>" class="text-danger" title="Sil"><i class="ti-trash"></i></a></li>
                                                 </ul>
                                             </td>

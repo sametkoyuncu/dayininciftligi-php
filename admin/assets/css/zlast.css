@@ -23,6 +23,12 @@
 	box-shadow: 0 0 3px 2px #858f91;
 }
 
+.btn-kirmizi {
+    background:linear-gradient(to right, #D31027 0%, #EA384D 100%); 
+    border-color:#38ef7d; 
+    color:beige;
+}
+
 /*gradient arkaplanlar*/
 .bg-mor {
     background:linear-gradient(to right, #8914fe 0%, #8063f5 100%); 
@@ -54,6 +60,11 @@
 .bg-acik-gri {
     background:linear-gradient(to right, #8e9eab 0%, #eef2f3 100%); 
     border-color: #eef2f3; 
+    color:beige;
+}
+.bg-turuncu {
+    background:linear-gradient(to right, #fc4a1a 0%, #f7b733 100%); 
+    border-color: #f7b733; 
     color:beige;
 }
 /*alt kısım ana site footer css*/

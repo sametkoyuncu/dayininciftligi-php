@@ -14,6 +14,81 @@
         'id' => 1
         ));
 ?>
+<!-- basic modal start -->
+<!-- yeni sosyal medya hesabı ekleyin -->
+<div class="modal fade" id="yeniurunekle">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-mor">
+                <h5 class="modal-title">Yeni Hesap Ekleyin</h5>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <form action="islem.php" method="POST">
+                <div class="modal-body">
+                    <div class="form-row mb-3 mx-2">
+                        <label for="example-text-input" class="col-form-label">Hesap Adı</label>
+                        <input class="form-control" name="sosyal_medya_adi" type="text" value="" placeholder="Twitter, İnstagram, vs.."id="example-text-input">
+                    </div>
+                    <div class="form-row mb-3 mx-2">
+                        <label for="example-text-input" class="col-form-label">Hesap Bağlantısı</label>
+                        <input class="form-control" name="sosyal_medya_url" type="text" value="" placeholder="http://siteadi.com/kullaniciadi" id="example-text-input">
+                    </div>
+                    <div class="form-row mb-3 mx-2">
+                        <label for="example-text-input" class="col-form-label">Hesap İkonu&nbsp;&nbsp;(<a class="mb-3" href="https://themify.me/themify-icons" target="_blank">İkonlara bakmak için tıklayınız</a>)</label>
+                        <input class="form-control" name="sosyal_medya_ikon" type="text" value="" placeholder="ti ti-ikon-bu" id="example-text-input">
+                    </div>
+                    <div class="form-row mb-1 ml-3">
+                    
+                    </div>                        
+                </div>
+                <div class="modal-footer bg-acik-gri">
+                    <button type="button" class="btn btn-geri btn-rounded" data-dismiss="modal"><i class="ti-arrow-left"></i>&nbsp; Geri Dön</button>
+                    <button type="submit" name="sosyalmedyaekle" class="btn btn-kaydet btn-rounded"><i class="ti-check"></i>&nbsp; Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- basic modal end -->
+
+
+<!-- sweet alert start-->
+<script src="assets/js/sweetalert.min.js"></script>
+<?php 
+    if(isset($_GET['durum'])){
+        if($_GET['durum']=='true'){?>
+           <script>
+                swal("İşlem Başarılı", {
+                    icon: "success",
+                    buttons: false,
+                    timer: 3000,
+                });
+            </script>
+            <style>
+                .swal-overlay {
+                    background-color: rgba(148,252,19, 0.45);
+                }
+            </style>
+            <?php
+        }else{?>
+           <script>
+                swal("İşlem Başarısız, Lütfen Tekrar Deneyiniz", {
+                    icon: "warning",
+                    buttons: false,
+                    timer: 3000,
+                });
+            </script>
+            <style>
+                .swal-overlay {
+                    background-color: rgba(255,0,0, 0.45);
+                }
+            </style>
+            <?php
+        }
+    }
+?>
+
+<!-- sweet alert end -->
             <div class="main-content-inner">
                  <!-- Textual inputs start -->
             <div class="col-12 mt-5">
@@ -61,7 +136,7 @@
                                         <h4 class="header-title">Kayıtlı Ürünler</h4>
                                     </div>
                                     <div class="col text-right">
-                                        <button type="button" class="btn btn-rounded btn-yeniekle btn-xs"><i class="ti-plus"></i> &nbsp;Yeni Ekle</button>
+                                    <button type="button" class="btn btn-rounded btn-yeniekle btn-xs" data-toggle="modal" data-target="#yeniurunekle"><i class="ti-plus"></i> &nbsp;Yeni Ekle</button>
                                     </div>
                                 </div>
                                 <p class="text-muted font-14 mb-4">Bu sayfada, sitede bulunan ürünler bölümünü düzenleyebilirsiniz. İster yeni ürün ekleyin, ister bazı bilgileri değiştirin, isterseniz ürün silin, isterseniz de bu bölümü gizleyin.</p>
