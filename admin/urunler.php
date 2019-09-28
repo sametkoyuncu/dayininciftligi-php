@@ -2,6 +2,7 @@
 <?php include "includes/header.php"; ?>
 <?php include "includes/header-area.php"; ?>
 <?php include "includes/page-title-area.php"; ?>
+<?php include "includes/alerts.php"; ?>
 <?php 
     $bolumsorgu=$db->prepare("SELECT * FROM bolumler WHERE bolum_adi=:adi");
     $bolumsorgu->execute(array(
@@ -20,22 +21,41 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header bg-mor">
-                <h5 class="modal-title">Yeni Hesap Ekleyin</h5>
+                <h5 class="modal-title">Yeni Ürün Ekleyin</h5>
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
             </div>
-            <form action="islem.php" method="POST">
+            <form action="islem.php" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="form-row mb-3 mx-2">
-                        <label for="example-text-input" class="col-form-label">Hesap Adı</label>
-                        <input class="form-control" name="sosyal_medya_adi" type="text" value="" placeholder="Twitter, İnstagram, vs.."id="example-text-input">
+                        <label for="example-text-input" class="col-form-label">Ürün Adı</label>
+                        <input class="form-control" name="urun_adi" type="text" value="" placeholder="Süt, Yumurta, Domates.." id="example-text-input">
                     </div>
                     <div class="form-row mb-3 mx-2">
-                        <label for="example-text-input" class="col-form-label">Hesap Bağlantısı</label>
-                        <input class="form-control" name="sosyal_medya_url" type="text" value="" placeholder="http://siteadi.com/kullaniciadi" id="example-text-input">
+                        <label for="example-text-input" class="col-form-label">Ürün Sırası</label>
+                        <input class="form-control" name="urun_sira" type="text" value="" placeholder="boş bırakın veya 1, 2, 3.. yazın" id="example-text-input">
                     </div>
                     <div class="form-row mb-3 mx-2">
-                        <label for="example-text-input" class="col-form-label">Hesap İkonu&nbsp;&nbsp;(<a class="mb-3" href="https://themify.me/themify-icons" target="_blank">İkonlara bakmak için tıklayınız</a>)</label>
-                        <input class="form-control" name="sosyal_medya_ikon" type="text" value="" placeholder="ti ti-ikon-bu" id="example-text-input">
+                        <label for="example-text-input" class="col-form-label">Ürün Görünürlüğü</label>
+                        <select class="custom-select" name="urun_durum">
+                            <option value="1">Göster</option>
+                            <option value="0">Gizle</option>
+                        </select>
+                    </div>
+                    <div class="form-row mb-3 mx-2">
+                        <label for="example-text-input" class="col-form-label">Ürün Görseli</label>
+                        <div class="input-group mb-1">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-mor">Yeni Yükle</span>
+                            </div>
+                            <div class="custom-file">
+                                <input type="file" name="urun_gorsel" class="custom-file-input" id="inputGroupFile01">
+                                <label class="custom-file-label" for="inputGroupFile01">Ürün için bir görsel seçiniz..</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row mb-3 mx-2">
+                        <label for="example-text-input" class="col-form-label">Görsel -alt- Metni</label>
+                        <input class="form-control" name="urun_alt" type="text" value="" placeholder="Dayının Çiftliği Ürünü.." id="example-text-input">
                     </div>
                     <div class="form-row mb-1 ml-3">
                     
@@ -43,7 +63,7 @@
                 </div>
                 <div class="modal-footer bg-acik-gri">
                     <button type="button" class="btn btn-geri btn-rounded" data-dismiss="modal"><i class="ti-arrow-left"></i>&nbsp; Geri Dön</button>
-                    <button type="submit" name="sosyalmedyaekle" class="btn btn-kaydet btn-rounded"><i class="ti-check"></i>&nbsp; Kaydet</button>
+                    <button type="submit" name="urunekle" class="btn btn-kaydet btn-rounded"><i class="ti-check"></i>&nbsp; Kaydet</button>
                 </div>
             </form>
         </div>
@@ -51,44 +71,6 @@
 </div>
 <!-- basic modal end -->
 
-
-<!-- sweet alert start-->
-<script src="assets/js/sweetalert.min.js"></script>
-<?php 
-    if(isset($_GET['durum'])){
-        if($_GET['durum']=='true'){?>
-           <script>
-                swal("İşlem Başarılı", {
-                    icon: "success",
-                    buttons: false,
-                    timer: 3000,
-                });
-            </script>
-            <style>
-                .swal-overlay {
-                    background-color: rgba(148,252,19, 0.45);
-                }
-            </style>
-            <?php
-        }else{?>
-           <script>
-                swal("İşlem Başarısız, Lütfen Tekrar Deneyiniz", {
-                    icon: "warning",
-                    buttons: false,
-                    timer: 3000,
-                });
-            </script>
-            <style>
-                .swal-overlay {
-                    background-color: rgba(255,0,0, 0.45);
-                }
-            </style>
-            <?php
-        }
-    }
-?>
-
-<!-- sweet alert end -->
             <div class="main-content-inner">
                  <!-- bölüm ayarı start -->
              <div class="col-12 mt-5">
@@ -133,7 +115,7 @@
                 </div>
                 <!-- bölüm ayarı end -->
                 <!-- Progress Table start -->
-                <div class="col-12 mt-5">
+                <div class="col-12 mt-5" id="urunler">
                         <div class="card">
                             <div class="card-body">
                                 <div class="row">
@@ -163,7 +145,7 @@
                                                 <tr>
                                                     <th scope="row"><?php echo $uruncek['urun_sira']; ?></th>
                                                     <td class="text-left"><?php echo $uruncek['urun_adi']; ?></td>
-                                                    <td><img src="../<?php echo $uruncek['urun_adresi']; ?>" alt="<?php echo $uruncek['urun_alt']; ?>"></td>
+                                                    <td><img src="../<?php echo $uruncek['urun_gorsel']; ?>" alt="<?php echo $uruncek['urun_alt']; ?>"></td>
                                                     <td>
                                                     <?php 
                                                         if($uruncek['urun_durum']=='1'){?>
@@ -176,8 +158,8 @@
                                                     </td>
                                                     <td>
                                                         <ul class="d-flex justify-content-center">
-                                                            <li class="mr-3"><a href="#" class="text-secondary" title="Düzenle"><i class="fa fa-edit"></i></a></li>
-                                                            <li><a href="#" class="text-danger" title="Sil"><i class="ti-trash"></i></a></li>
+                                                            <li class="mr-3"><a href="urun-duzenle.php?pg=7&urun_id=<?php echo $uruncek['urun_id']; ?>" class="text-secondary" title="Düzenle"><i class="fa fa-edit"></i></a></li>
+                                                            <li><a href="islem.php?urunsil=true&urun_id=<?php echo $uruncek['urun_id']; ?>" class="text-danger" title="Sil"><i class="ti-trash"></i></a></li>
                                                         </ul>
                                                     </td>
                                                 </tr>

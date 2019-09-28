@@ -22,8 +22,8 @@
                 <div class="row">
                 <?php while ($galericek=$galerisorgu->fetch(PDO::FETCH_ASSOC)) { ?>
                     <div class="col-sm-6 col-md-4">
-                        <a class="lightbox" href="<?php echo $galericek['gorsel_adresi']; ?>">
-                            <img src="<?php echo $galericek['gorsel_adresi']; ?>" alt="<?php echo $galericek['gorsel_alt']; ?>">
+                        <a class="lightbox" href="<?php echo $galericek['gorsel_url']; ?>">
+                            <img src="<?php echo $galericek['gorsel_url']; ?>" alt="<?php echo $galericek['gorsel_alt']; ?>">
                         </a>
                     </div>
                 <?php } ?>

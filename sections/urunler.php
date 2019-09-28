@@ -13,7 +13,7 @@ $urunsorgu->execute(array(
                         <!-- single-brand -->
                         <div class="single-brand-item d-table">
                             <div class="d-table-cell">
-                                <img src="<?php echo $uruncek['urun_adresi']; ?>" alt="<?php echo $uruncek['urun_alt']; ?>">
+                                <img src="<?php echo $uruncek['urun_gorsel']; ?>" alt="<?php echo $uruncek['urun_alt']; ?>">
                             </div>
                         </div>
                     <?php } ?>

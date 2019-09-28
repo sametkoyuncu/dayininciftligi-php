@@ -14,11 +14,17 @@
 		$sayfa_no=$_POST['sayfa_no'];
 		$bolumguncelle=$db->prepare("UPDATE bolumler SET
 			bolum_sira=:sira,
-			bolum_durum=:durum
+			bolum_durum=:durum,
+			bolum_altbaslik=:altbaslik,
+			bolum_buton_yazi=:buton_yazi,
+			bolum_buton_url=:buton_url
 			WHERE bolum_id=:id");
 		$guncelle=$bolumguncelle->execute(array(
 			'sira' => $_POST['bolum_sira'],
 			'durum' => $_POST['bolum_durum'],
+			'altbaslik' => $_POST['bolum_altbaslik'],
+			'buton_yazi' => $_POST['bolum_buton_yazi'],
+			'buton_url' => $_POST['bolum_buton_url'],
 			'id' => $_POST['bolum_id']
 			));
 		if($guncelle) {
@@ -315,6 +321,236 @@
 				header("Location:giris.php?pg=6&durum=true");
 			} else {
 				header("Location:giris.php?pg=6&durum=false");
+			}
+		}	
+	}
+####################################################################################
+############					   galeri ayarları						############
+####################################################################################
+	#
+	#fotoğraf ekle
+	#
+	if (isset($_POST['fotoekle'])) {
+
+		$yukleme_dizini = '../assets/img/galeri';
+			@$tmp_name = $_FILES['gorsel']["tmp_name"];
+			@$name = $_FILES['gorsel']["name"];
+			$rastgelesayi1=rand(20000, 32000);
+			$rastgelesayi2=rand(20000, 32000);
+			$rastgelesayi3=rand(20000, 32000);
+			$rastgelesayi4=rand(20000, 32000);
+			$rastgelead=$rastgelesayi1.$rastgelesayi2.$rastgelesayi3.$rastgelesayi4;
+			$refgorselyolu=substr($yukleme_dizini, 3)."/".$rastgelead.$name;
+			@move_uploaded_file($tmp_name, "$yukleme_dizini/$rastgelead$name");
+
+		$gorselekle=$db->prepare("INSERT INTO galeri SET
+			gorsel_url=:gorsel,
+			gorsel_alt=:alt,
+			gorsel_durum=:durum");
+		$ekle=$gorselekle->execute(array(
+			'gorsel' => $refgorselyolu,
+			'alt' => $_POST['gorsel_alt'],
+			'durum' => $_POST['gorsel_durum']
+			));
+		if ($ekle) {
+			header("Location:galeri.php?pg=8&durum=true#fotograflar");
+		} else {
+			header("Location:galeri.php?pg=8&durum=false#fotograflar");
+		}
+	}
+	#
+	#fotoğraf güncelleme
+	#
+	if (isset($_POST['fotoguncelle'])) {
+
+        if ($_FILES['gorsel']["size"] > 0) {
+
+			$yukleme_dizini = '../assets/img/galeri';
+			@$tmp_name = $_FILES['gorsel']["tmp_name"];
+			@$name = $_FILES['gorsel']["name"];
+			$rastgelesayi1=rand(20000, 32000);
+			$rastgelesayi2=rand(20000, 32000);
+			$rastgelesayi3=rand(20000, 32000);
+			$rastgelesayi4=rand(20000, 32000);
+			$rastgelead=$rastgelesayi1.$rastgelesayi2.$rastgelesayi3.$rastgelesayi4;
+			$refgorselyolu=substr($yukleme_dizini, 3)."/".$rastgelead.$name;
+			@move_uploaded_file($tmp_name, "$yukleme_dizini/$rastgelead$name");
+
+			$gorsel_id = $_POST['gorsel_id'];
+
+			$gorselguncelle=$db->prepare("UPDATE galeri SET
+				gorsel_url=:gorsel,
+				gorsel_alt=:alt,
+				gorsel_durum=:durum
+				WHERE gorsel_id=:id");
+			$guncelle=$gorselguncelle->execute(array(
+				'gorsel' => $refgorselyolu,
+				'alt' => $_POST['gorsel_alt'],
+				'durum' => $_POST['gorsel_durum'],
+				'id' => $gorsel_id
+				));
+			if ($guncelle) {
+				$gorselsil_adres=$_POST["gorsel_eski"];
+				unlink("$gorselsil_adres");
+
+				header("Location:galeri.php?pg=8&durum=true&urun_id=$gorsel_id");
+			} else {
+				header("Location:galeri.php?pg=8&durum=false&urun_id=$gorsel_id");
+			}
+
+		} else {
+			$gorsel_id = $_POST['gorsel_id'];
+
+			$gorselguncelle=$db->prepare("UPDATE galeri SET
+				gorsel_alt=:alt,
+				gorsel_durum=:durum
+				WHERE gorsel_id=:id");
+			$guncelle=$gorselguncelle->execute(array(
+				'alt' => $_POST['gorsel_alt'],
+				'durum' => $_POST['gorsel_durum'],
+				'id' => $gorsel_id
+				));
+			if ($guncelle) {
+				header("Location:galeri-fotograf-düzenle.php?pg=8&durum=true&urun_id=$gorsel_id");
+			} else {
+				header("Location:galeri-fotograf-düzenle.php?pg=8&durum=false&urun_id=$gorsel_id");
+			}
+		}	
+	}
+	#
+	#fotoğraf sil
+	#
+	if(isset($_GET['fotosil'])) {
+		if ($_GET['fotosil']=="true") {
+			$fotosil=$db->prepare("DELETE FROM galeri WHERE gorsel_id=:id");
+			$sil=$fotosil->execute(array(
+				'id' => $_GET['gorsel_id']
+				));
+			if ($sil) {
+				header("Location:galeri.php?pg=8&durum=true#fotograflar");
+			} else {
+				header("Location:galeri.php?pg=8&durum=false#fotograflar");
+			}
+		}	
+	}
+
+####################################################################################
+############					   ürün ayarları						############
+####################################################################################
+	#
+	#ürün ekle
+	#
+	if (isset($_POST['urunekle'])) {
+
+		$yukleme_dizini = '../assets/img/logo';
+			@$tmp_name = $_FILES['urun_gorsel']["tmp_name"];
+			@$name = $_FILES['urun_gorsel']["name"];
+			$rastgelesayi1=rand(20000, 32000);
+			$rastgelesayi2=rand(20000, 32000);
+			$rastgelesayi3=rand(20000, 32000);
+			$rastgelesayi4=rand(20000, 32000);
+			$rastgelead=$rastgelesayi1.$rastgelesayi2.$rastgelesayi3.$rastgelesayi4;
+			$refgorselyolu=substr($yukleme_dizini, 3)."/".$rastgelead.$name;
+			@move_uploaded_file($tmp_name, "$yukleme_dizini/$rastgelead$name");
+
+		$urunekle=$db->prepare("INSERT INTO urunler SET
+			urun_adi=:adi,
+			urun_gorsel=:gorsel,
+			urun_alt=:alt,
+			urun_sira=:sira,
+			urun_durum=:durum");
+		$ekle=$urunekle->execute(array(
+			'adi' => $_POST['urun_adi'],
+			'gorsel' => $refgorselyolu,
+			'alt' => $_POST['urun_alt'],
+			'sira' => $_POST['urun_sira'],
+			'durum' => $_POST['urun_durum']
+			));
+		if ($ekle) {
+			header("Location:urunler.php?pg=7&durum=true#urunler");
+		} else {
+			header("Location:urunler.php?pg=7&durum=false#urunler");
+		}
+	}
+	#
+	#ürün güncelleme
+	#
+	if (isset($_POST['urunguncelle'])) {
+
+        if ($_FILES['urun_gorsel']["size"] > 0) {
+
+			$yukleme_dizini = '../assets/img/logo';
+			@$tmp_name = $_FILES['urun_gorsel']["tmp_name"];
+			@$name = $_FILES['urun_gorsel']["name"];
+			$rastgelesayi1=rand(20000, 32000);
+			$rastgelesayi2=rand(20000, 32000);
+			$rastgelesayi3=rand(20000, 32000);
+			$rastgelesayi4=rand(20000, 32000);
+			$rastgelead=$rastgelesayi1.$rastgelesayi2.$rastgelesayi3.$rastgelesayi4;
+			$refgorselyolu=substr($yukleme_dizini, 3)."/".$rastgelead.$name;
+			@move_uploaded_file($tmp_name, "$yukleme_dizini/$rastgelead$name");
+
+			$urun_id = $_POST['urun_id'];
+
+			$urunguncelle=$db->prepare("UPDATE urunler SET
+				urun_adi=:adi,
+				urun_gorsel=:gorsel,
+				urun_alt=:alt,
+				urun_sira=:sira,
+				urun_durum=:durum
+				WHERE urun_id=:id");
+			$guncelle=$urunguncelle->execute(array(
+				'adi' => $_POST['urun_adi'],
+				'gorsel' => $refgorselyolu,
+				'alt' => $_POST['urun_alt'],
+				'sira' => $_POST['urun_sira'],
+				'durum' => $_POST['urun_durum'],
+				'id' => $urun_id
+				));
+			if ($guncelle) {
+				$gorselsil_adres=$_POST["urun_gorsel_eski"];
+				unlink("$gorselsil_adres");
+
+				header("Location:urun-duzenle.php?pg=7&durum=true&urun_id=$urun_id");
+			} else {
+				header("Location:urun-duzenle.php?pg=7&durum=false&urun_id=$urun_id");
+			}
+
+		} else {
+			$urun_id = $_POST['urun_id'];
+			$urunguncelle=$db->prepare("UPDATE urunler SET
+				urun_adi=:adi,
+				urun_alt=:alt,
+				urun_sira=:sira,
+				urun_durum=:durum
+				WHERE urun_id=:id");
+			$guncelle=$urunguncelle->execute(array(
+				'adi' => $_POST['urun_adi'],
+				'alt' => $_POST['urun_alt'],
+				'sira' => $_POST['urun_sira'],
+				'durum' => $_POST['urun_durum'],
+				'id' => $urun_id
+				));
+			if ($guncelle) {
+				header("Location:urun-duzenle.php?pg=7&durum=true&urun_id=$urun_id");
+			} else {
+				header("Location:urun-duzenle.php?pg=7&durum=false&urun_id=$urun_id");
+			}
+		}	
+	}
+	#
+	#ürün sil
+	#
+	if(isset($_GET['urunsil'])) {
+		if ($_GET['urunsil']=="true") {
+			$urunsil=$db->prepare("DELETE FROM urunler WHERE urun_id=:id");
+			$sil=$urunsil->execute(array(
+				'id' => $_GET['urun_id']
+				));
+			if ($sil) {
+				header("Location:urunler.php?pg=7&durum=true#urunler");
+			} else {
+				header("Location:urunler.php?pg=7&durum=false#urunler");
 			}
 		}	
 	}

@@ -21,3 +21,4 @@
 - eks de bile giriş yapmadan silme işlemi gerçekleşiyor
 - navbar sıraya göre çekilmiyor
 - ürünler bölümü 5 görsele tamamlanıyor, eğer 5 ten az varsa, görünür olanlar tekrar ediyor
+- galeri sayfasından fotoğraflar kısmına sayfalama ekle (admin paneli)

@@ -23,7 +23,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="header-title">Bölüm Ayarları</h4>
-                            <p class="text-muted font-14 mb-4">Bu kısımda, anasayfada gözüken 'ürünler bölümünü' düzenleyebilirsiniz.</p>
+                            <p class="text-muted font-14 mb-4">Bu kısımda, anasayfada gözüken 'giriş bölümünü' düzenleyebilirsiniz.</p>
                             <hr>
                             <form action="islem.php" method="POST">
                                 <input type="hidden" name="bolum_id" value="<?php echo $bolumcek['bolum_id']; ?>">
@@ -65,7 +65,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="header-title">Giriş Bölümü İçerikleri</h4>
-                        <p class="text-muted font-14 mb-4">Bu sayfada, site açıldığında ilk gözüken kısım olan 'giriş ekranını' düzenleyebilirsiniz.</p>
+                        <p class="text-muted font-14 mb-4">Bu alanda giriş bölümünü içeriklerini düzenleyebilirsiniz.</p>
                         <hr>
                         <form action="islem.php" method="POST" enctype="multipart/form-data">
                             <input type="hidden" name="giris_arkaplan_eski" value="<?php echo $giris_arkaplan; ?>">
@@ -112,7 +112,7 @@
                                 </div>
                                 <!-- accordion style 4 start -->
                                 <div class="col-12">
-                                    <div id="accordion4" class="according accordion-s3 gradiant-bg">
+                                    <div id="accordion4" class="according accordion-s3">
                                         <div class="card-header">
                                             <a class="card-link" data-toggle="collapse" href="#accordion41">Mevcut Arkaplanı Görmek İçin Tıklayınız</a>
                                         </div>
