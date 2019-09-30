@@ -2,7 +2,7 @@
 //4.7.19 - samet koyuncu
 //
 //navigation.php için sorgu
-$navbarsorgu=$db->prepare("SELECT * FROM navbar WHERE nav_durum=:id");
+$navbarsorgu=$db->prepare("SELECT * FROM navbar WHERE nav_durum=:id ORDER BY nav_sira");
 $navbarsorgu->execute(array(
     'id' => 1
     ));

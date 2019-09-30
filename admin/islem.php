@@ -393,9 +393,9 @@
 				$gorselsil_adres=$_POST["gorsel_eski"];
 				unlink("$gorselsil_adres");
 
-				header("Location:galeri.php?pg=8&durum=true&urun_id=$gorsel_id");
+				header("Location:galeri.php?pg=8&durum=true&gorsel_id=$gorsel_id");
 			} else {
-				header("Location:galeri.php?pg=8&durum=false&urun_id=$gorsel_id");
+				header("Location:galeri.php?pg=8&durum=false&gorsel_id=$gorsel_id");
 			}
 
 		} else {
@@ -411,9 +411,9 @@
 				'id' => $gorsel_id
 				));
 			if ($guncelle) {
-				header("Location:galeri-fotograf-düzenle.php?pg=8&durum=true&urun_id=$gorsel_id");
+				header("Location:galeri-fotograf-duzenle.php?pg=8&durum=true&gorsel_id=$gorsel_id");
 			} else {
-				header("Location:galeri-fotograf-düzenle.php?pg=8&durum=false&urun_id=$gorsel_id");
+				header("Location:galeri-fotograf-duzenle.php?pg=8&durum=false&gorsel_id=$gorsel_id");
 			}
 		}	
 	}
@@ -553,5 +553,36 @@
 				header("Location:urunler.php?pg=7&durum=false#urunler");
 			}
 		}	
+	}
+####################################################################################
+############					 iletişim bölümü ayarları				############
+####################################################################################
+	#
+	#iletişim bölümü bilgi güncelleme
+	#
+	if (isset($_POST['iletisimguncelle'])) {
+		
+		$iletisimguncelle=$db->prepare("UPDATE iletisim SET
+			iletisim_adres=:adres,
+			iletisim_adres_url=:adres_url,
+			iletisim_telefon=:telefon,
+			iletisim_eposta=:eposta,
+			iletisim_facebook=:facebook,
+			iletisim_instagram=:instagram
+			WHERE iletisim_id=:id");
+		$guncelle=$iletisimguncelle->execute(array(
+			'adres' => $_POST['iletisim_adres'],
+			'adres_url' => $_POST['iletisim_adres_url'],
+			'telefon' => $_POST['iletisim_telefon'],
+			'eposta' => $_POST['iletisim_eposta'],
+			'facebook' => $_POST['iletisim_facebook'],
+			'instagram' => $_POST['iletisim_instagram'],
+			'id' => $_POST['iletisim_id']
+			));
+		if($guncelle) {
+			header("Location:iletisim.php?pg=10&durum=true#iletisim");
+		} else {
+			header("Location:iletisim.php?pg=10&durum=false#iletisim");
+		}
 	}
 ?>

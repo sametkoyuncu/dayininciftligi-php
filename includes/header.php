@@ -14,7 +14,7 @@ $ayarlarsorgu->execute(array(
 $ayarcek=$ayarlarsorgu->fetch(PDO::FETCH_ASSOC);
 
 //index.php için sorgu
-$bolumlersorgu=$db->prepare("SELECT * FROM bolumler WHERE bolum_durum=:id");
+$bolumlersorgu=$db->prepare("SELECT * FROM bolumler WHERE bolum_durum=:id ORDER BY bolum_sira");
 $bolumlersorgu->execute(array(
    'id' => 1
     ));

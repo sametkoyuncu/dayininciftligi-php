@@ -171,7 +171,7 @@
                                             </td>
                                             <td>
                                                 <ul class="d-flex justify-content-center">
-                                                    <li class="mr-3"><a href="#" class="text-secondary" title="Düzenle"><i class="fa fa-edit"></i></a></li>
+                                                    <li class="mr-3"><a href="galeri-fotograf-duzenle.php?pg=8&gorsel_id=<?php echo $fotocek['gorsel_id']; ?>" class="text-secondary" title="Düzenle"><i class="fa fa-edit"></i></a></li>
                                                     <li><a href="islem.php?fotosil=true&gorsel_id=<?php echo $fotocek['gorsel_id']; ?>" class="text-danger" title="Sil"><i class="ti-trash"></i></a></li>
                                                 </ul>
                                             </td>

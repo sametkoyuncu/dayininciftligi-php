@@ -1,11 +1,7 @@
 # dayininciftligi
  Dayının Çiftliği Admin Panelli Websitesi
 # Notlar (görülen hata, eksik vs.)
-- sidebarda açılış sayfanın olduğu sekme açık olması lazım (açılan sayfanın sidebardaki < li > etiketi içine class="active" eklenecek) - biraz kısmına eklendi
-- bölümler kısmında her bir bölüm için sıra seçme eklenecek, veritabanında ilgili 'bolumler' tablosu var
-- anasayfadaki bölümler bilgileri 'bolumler' tablosundan çekmiyor gibi
 - breadcrumb düzenlendi, veritabanına eksik sayfaların bilgileri girilecek
--genel ayarlar, upload eklenmeli
 - footer
     - 1. bölüm > başlık metin görsel
     - 2. bölüm > iletişim bilgileri vt den çekilecek
@@ -19,6 +15,6 @@
 - opera tarayıcısında sidebar kapalı geliyor
 - KULLANICI GİRİŞİ VE BÜTÜN İŞLEMLER İÇİN KULLANICI KONROLÜ ŞART, YOKSA URL Yİ BİLEN HERKES İŞLEM YAPAR
 - eks de bile giriş yapmadan silme işlemi gerçekleşiyor
-- navbar sıraya göre çekilmiyor
 - ürünler bölümü 5 görsele tamamlanıyor, eğer 5 ten az varsa, görünür olanlar tekrar ediyor
 - galeri sayfasından fotoğraflar kısmına sayfalama ekle (admin paneli)
+-silme işlemleri için onayla butonu eklenecek
