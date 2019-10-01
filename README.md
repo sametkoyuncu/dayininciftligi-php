@@ -13,7 +13,7 @@
 - genel ayarlar kısmında logo veya favicon eklerken eski görseli silmiyor, unlink ekli ama kontrol edilmesi gerek
 - ekran daralınca footerdaki kısımlar dengesiz oluyor
 - opera tarayıcısında sidebar kapalı geliyor
-- KULLANICI GİRİŞİ VE BÜTÜN İŞLEMLER İÇİN KULLANICI KONROLÜ ŞART, YOKSA URL Yİ BİLEN HERKES İŞLEM YAPAR
+- KULLANICI GİRİŞİ VE BÜTÜN İŞLEMLER İÇİN KULLANICI KONtROLÜ ŞART, YOKSA URL Yİ BİLEN HERKES İŞLEM YAPAR
 - eks de bile giriş yapmadan silme işlemi gerçekleşiyor
 - ürünler bölümü 5 görsele tamamlanıyor, eğer 5 ten az varsa, görünür olanlar tekrar ediyor
 - galeri sayfasından fotoğraflar kısmına sayfalama ekle (admin paneli)

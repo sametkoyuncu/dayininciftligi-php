@@ -12,12 +12,12 @@
 
        
 
-        <div class="row">
+        <div class="row" id="eposta">
             <div class="col-12">
             <h2 class="contact-title">Mesaj Gönderin</h2>
             </div>
             <div class="col-lg-8">
-            <form  action="/islem.php" method="POST" class="form-contact contact_form" id="contactForm">
+            <form  action="admin/islem.php" method="POST" class="form-contact contact_form" id="contactForm">
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">

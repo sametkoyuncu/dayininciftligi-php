@@ -2,10 +2,11 @@
 // 4.7.19 - Samet Koyuncu
 ?>
 <?php 
-    include "baglan.php"; 
+    include "admin/baglan.php"; 
     setlocale(LC_TIME, "turkish"); //başka bir dil içinse burada belirteceksin.
     setlocale(LC_ALL,'turkish'); //başka bir dil içinse burada belirteceksin.
 ?>
+<?php include "admin/includes/alerts.php";  ?>
 <?php
 $ayarlarsorgu=$db->prepare("SELECT * FROM ayarlar WHERE ayar_id=:id");
 $ayarlarsorgu->execute(array(

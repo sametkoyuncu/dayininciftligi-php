@@ -585,4 +585,88 @@
 			header("Location:iletisim.php?pg=10&durum=false#iletisim");
 		}
 	}
+####################################################################################
+############					 alt kısım ayarları						############
+####################################################################################
+	#
+	#alt kısım bilgi güncelleme
+	#
+	if (isset($_POST['altkisimguncelle'])) {
+		
+		$id=$_POST['altkisim_id'];
+
+		$altkisimguncelle=$db->prepare("UPDATE alt_kisim SET
+			altkisim_1=:bir,
+			altkisim_2=:iki,
+			altkisim_3=:uc
+			WHERE altkisim_id=:id");
+		$guncelle=$altkisimguncelle->execute(array(
+			'bir' => $_POST['altkisim_1'],
+			'iki' => $_POST['altkisim_2'],
+			'uc' => $_POST['altkisim_3'],
+			'id' => $id
+			));
+		if($id=="1"){
+			$git="bir";
+		}else{
+			$git="iki";
+		}
+		if($guncelle) {
+			header("Location:alt-kisim.php?pg=11&durum=true#$git");
+		} else {
+			header("Location:alt-kisim.php?pg=11&durum=false#$git");
+		}
+	}
+/* SİTE FORMLARI */
+/* DAYININ ÇİFTLİĞİ COM */
+	####################################################################################
+	############					   site mesaj ayarı						############
+	####################################################################################
+	#
+	#mesaj ayarı - mesaj ekle
+	#
+	if (isset($_POST['mesajekle'])) {
+
+		$mesajekle=$db->prepare("INSERT INTO mesajlar SET
+			mesaj_gonderen=:gonderen,
+			mesaj_konu=:konu,
+			mesaj_eposta=:eposta,
+			mesaj_icerik=:icerik
+			");
+		$ekle=$mesajekle->execute(array(
+			'gonderen' => $_POST['name'],
+			'konu' => $_POST['subject'],
+			'eposta' => $_POST['email'],
+			'icerik' => $_POST['message']
+			));
+		
+		if ($ekle) {
+			header("Location:../index.php?durum=true#eposta");
+		} else {
+			header("Location:../index.php?durum=false#eposta");
+		}
+	}
+	
+	####################################################################################
+	############					   site abone ayarı						############
+	####################################################################################
+	#
+	#abone ayarı - abone ekle
+	#
+	if (isset($_POST['aboneekle'])) {
+
+		$aboneekle=$db->prepare("INSERT INTO aboneler SET
+			abone_eposta=:eposta
+			");
+		$ekle=$aboneekle->execute(array(
+			'eposta' => $_POST['email']
+			));
+		
+		if ($ekle) {
+			header("Location:../index.php?durum=true#footer");
+		} else {
+			header("Location:../index.php?durum=false#footer");
+		}
+	}
+	
 ?>

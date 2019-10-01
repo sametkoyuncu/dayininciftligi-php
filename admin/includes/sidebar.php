@@ -3,7 +3,7 @@
 Sayfa id'leri
 1 index          |  2 raporlar      |  3 genel bilgiler  |  4 meta            |  5 üst kısım      
 6 giris          |  7 ürünler       |  8 galeri          |  9 blog            |  10 iletişim 
-11 alt kısım     |  12
+11 alt kısım     |  12 sayfa kapak  |  13 sağ sütun
 */
 ?>
 <?php
@@ -49,13 +49,12 @@ $ayarcek=$ayarsorgu->fetch(PDO::FETCH_ASSOC);
                                 <li <?php if($page_id==11){ echo 'class="active"';} ?>><a href="alt-kisim.php?pg=11">Alt Kısım</a></li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-file"></i><span>Tekil Sayfalar
+                            <li <?php if($page_id>=12 && $page_id<=13){ echo 'class="active"';} ?>>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-file"></i><span>Tekil Sayfa Ayarları
                                     </span></a>
                                 <ul class="collapse">
-                                <li class=""><a href="index.php">Çoklu Yazı Sayfası</a></li>   
-                                <li class=""><a href="index.php">Tekil Yazı Sayfası</a></li>
-                                <li class=""><a href="index.php">Sağ Sütun</a></li>
+                                <li <?php if($page_id==12){ echo 'class="active"';} ?> class=""><a href="sayfa-kapagi.php?pg=12">Sayfa Kapağı</a></li>
+                                <li <?php if($page_id==13){ echo 'class="active"';} ?> class=""><a href="sag-sutun.php?pg=13">Sağ Sütun</a></li>
                                 </ul>
                             </li>
                             <!--<li>
