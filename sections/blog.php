@@ -52,7 +52,7 @@ $kategoribilgisi = $db->prepare("SELECT * FROM kategoriler WHERE kategori_id=:id
             <?php } ?>
             <div class="container">
                 <div class="row">
-                    <div class="mx-auto">
+                    <div class="mx-auto mt-3  mb-5">
                         <a type="" class="anasayfa-baglanti" href="<?php echo $bolumcek['bolum_buton_url']; ?>"><?php echo $bolumcek['bolum_buton_yazi']; ?></a>
                     </div>
                 </div>

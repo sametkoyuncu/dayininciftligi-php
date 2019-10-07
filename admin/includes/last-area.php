@@ -26,7 +26,8 @@
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
-    
+    <!-- ckeditor5 -->
+    <script src="assets/js/ckeditor.js"></script>
 </body>
 
 </html>

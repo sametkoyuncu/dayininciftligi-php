@@ -67,10 +67,10 @@ h1 {
 }
 /* blog css */
 .blog-area-background {
-    background-color: #ffffff  !important;
+    background-color: #f8f8f8  !important;
 }
 .single-blog-background {
-    background-color: #f8f8f8  !important;
+    background-color: #ffffff  !important;
     border-radius:  10px;
 }
 

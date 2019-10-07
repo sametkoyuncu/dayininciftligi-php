@@ -547,7 +547,9 @@ ul {
 
 .single-blog {
   overflow: hidden;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  box-shadow: 0px 10px 20px 0px rgba(42, 34, 123, 0);;
+  transition: box-shadow 1s;}
   .single-blog:hover {
     box-shadow: 0px 10px 20px 0px rgba(42, 34, 123, 0.1); }
   .single-blog .thumb {

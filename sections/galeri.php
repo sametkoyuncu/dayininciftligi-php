@@ -10,7 +10,7 @@ $galerisorgu->execute(array(
     'durum' => 1
 ));
 ?>
-<section class="galeri area-padding-top" id="galeri">
+<section class="galeri  area-padding-top mb-5" id="galeri">
     <div class="container">
         <h1 class="text-center"><?php echo $bolumcek['bolum_baslik']; ?></h1>
         <p class="page-description text-center"><?php echo $bolumcek['bolum_altbaslik']; ?></p>
@@ -25,7 +25,7 @@ $galerisorgu->execute(array(
                         </a>
                     </div>
                 <?php } ?>
-                <div class="mx-auto">
+                <div class="mx-auto mt-5">
                     <a type="" class="anasayfa-baglanti" href="<?php echo $bolumcek['bolum_buton_url']; ?>"><?php echo $bolumcek['bolum_buton_yazi']; ?></a>
                 </div>
             </div>
