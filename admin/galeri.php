@@ -114,7 +114,7 @@
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom01">Bağlantı Adresi</label>
-                                    <input class="form-control" type="text"  name="bolum_buton_url" value="<?php echo $bolumcek['bolum_buton_url']; ?>" id="example-text-input">
+                                    <input class="form-control" type="text"  name="bolum_buton_url" value="<?php echo $bolumcek['bolum_buton_url']; ?>" disabled id="example-text-input">
                                         <div class="valid-feedback">
                                         İyi gözüküyor!
                                         </div>

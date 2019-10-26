@@ -16,8 +16,8 @@
            <div class="col-12 mt-5">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="header-title">Galeri Bölümü Ayarları</h4>
-                        <p class="text-muted font-14 mb-4">Bu sayfada, anasayfada gözüken 'galeri bölümünü' düzenleyebilirsiniz.</p>
+                        <h4 class="header-title">Blog Bölümü Ayarları</h4>
+                        <p class="text-muted font-14 mb-4">Bu sayfada, anasayfada gözüken 'blog bölümünü' düzenleyebilirsiniz.</p>
                         <hr>
                         <form action="islem.php" method="POST">
                             <input type="hidden" name="bolum_id" value="<?php echo $bolumcek['bolum_id']; ?>">
@@ -62,7 +62,7 @@
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom01">Bağlantı Adresi</label>
-                                    <input class="form-control" type="text"  name="bolum_buton_url" value="<?php echo $bolumcek['bolum_buton_url']; ?>" id="example-text-input">
+                                    <input class="form-control" type="text"  name="bolum_buton_url" value="<?php echo $bolumcek['bolum_buton_url']; ?>" disabled id="example-text-input">
                                         <div class="valid-feedback">
                                         İyi gözüküyor!
                                         </div>

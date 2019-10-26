@@ -32,7 +32,7 @@
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
                                         <label for="validationCustom01">Bölüm Sırası</label>
-                                        <input class="form-control" type="text" name="bolum_sira" value="<?php echo $bolumcek['bolum_sira']; ?>" id="example-text-input">
+                                        <input class="form-control" type="text" name="bolum_sira" value="<?php echo $bolumcek['bolum_sira']; ?>" disabled id="example-text-input">
                                             <div class="valid-feedback">
                                             İyi gözüküyor!
                                             </div>

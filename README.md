@@ -17,4 +17,5 @@
 - eks de bile giriş yapmadan silme işlemi gerçekleşiyor
 - ürünler bölümü 5 görsele tamamlanıyor, eğer 5 ten az varsa, görünür olanlar tekrar ediyor
 - galeri sayfasından fotoğraflar kısmına sayfalama ekle (admin paneli)
--silme işlemleri için onayla butonu eklenecek
+- silme işlemleri için onayla butonu eklenecek
+- galerideki fotoğraflar, sol menüde 'fotoğraflar' bölümünden eklenecek

@@ -40,29 +40,29 @@ $ayarcek=$ayarsorgu->fetch(PDO::FETCH_ASSOC);
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-grid2"></i><span>Anasayfa Bölümleri
                                     </span></a>
                                 <ul class="collapse">
-                                <li <?php if($page_id==5){ echo 'class="active"';} ?>><a href="ust-kisim.php?pg=5">Üst Kısım</a></li>
-                                <li <?php if($page_id==6){ echo 'class="active"';} ?>><a href="giris.php?pg=6">Giriş</a></li>
-                                <li <?php if($page_id==7){ echo 'class="active"';} ?>><a href="urunler.php?pg=7">Ürünler</a></li>
-                                <li <?php if($page_id==8){ echo 'class="active"';} ?>><a href="galeri.php?pg=8">Galeri</a></li>
-                                <li <?php if($page_id==9){ echo 'class="active"';} ?>><a href="blog.php?pg=9">Blog</a></li>
-                                <li <?php if($page_id==10){ echo 'class="active"';} ?>><a href="iletisim.php?pg=10">İletişim</a></li>
-                                <li <?php if($page_id==11){ echo 'class="active"';} ?>><a href="alt-kisim.php?pg=11">Alt Kısım</a></li>
+                                    <li <?php if($page_id==5){ echo 'class="active"';} ?>><a href="ust-kisim.php?pg=5">Üst Kısım</a></li>
+                                    <li <?php if($page_id==6){ echo 'class="active"';} ?>><a href="giris.php?pg=6">Giriş</a></li>
+                                    <li <?php if($page_id==7){ echo 'class="active"';} ?>><a href="urunler.php?pg=7">Ürünler</a></li>
+                                    <li <?php if($page_id==8){ echo 'class="active"';} ?>><a href="galeri.php?pg=8">Galeri</a></li>
+                                    <li <?php if($page_id==9){ echo 'class="active"';} ?>><a href="blog.php?pg=9">Blog</a></li>
+                                    <li <?php if($page_id==10){ echo 'class="active"';} ?>><a href="iletisim.php?pg=10">İletişim</a></li>
+                                    <li <?php if($page_id==11){ echo 'class="active"';} ?>><a href="alt-kisim.php?pg=11">Alt Kısım</a></li>
                                 </ul>
                             </li>
-                            <li <?php if($page_id>=12 && $page_id<=13){ echo 'class="active"';} ?>>
+                            <!--<li <?php if($page_id>=12 && $page_id<=13){ echo 'class="active"';} ?>>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-file"></i><span>Tekil Sayfa Ayarları
                                     </span></a>
                                 <ul class="collapse">
-                                <li <?php if($page_id==12){ echo 'class="active"';} ?> class=""><a href="sayfa-kapagi.php?pg=12">Sayfa Kapağı</a></li>
-                                <li <?php if($page_id==13){ echo 'class="active"';} ?> class=""><a href="sag-sutun.php?pg=13">Sağ Sütun</a></li>
+                                    <li <?php if($page_id==12){ echo 'class="active"';} ?> class=""><a href="sayfa-kapagi.php?pg=12">Sayfa Kapağı</a></li>
+                                    <li <?php if($page_id==13){ echo 'class="active"';} ?> class=""><a href="sag-sutun.php?pg=13">Sağ Sütun</a></li>
                                 </ul>
-                            </li>
+                            </li>-->
                             <!--<li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Sayfalar
                                     </span></a>
                                 <ul class="collapse">
-                                <li class=""><a href="index.php">Tüm Sayfalar</a></li>
-                                <li class=""><a href="index.php">Yeni Ekle</a></li>
+                                    <li class=""><a href="index.php">Tüm Sayfalar</a></li>
+                                    <li class=""><a href="index.php">Yeni Ekle</a></li>
                                 </ul>
                             </li>-->
                             <li>
@@ -76,6 +76,10 @@ $ayarcek=$ayarsorgu->fetch(PDO::FETCH_ASSOC);
                                 </ul>
                             </li>
                             <li>
+                                <a href="javascript:void(0)" aria-expanded="true"><i class="ti-gallery"></i><span>Fotoğraflar
+                                    </span></a>
+                            </li>
+                            <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-comments-smiley"></i><span>Yorumlar
                                     </span></a>
                                 <ul class="collapse">
@@ -84,6 +88,7 @@ $ayarcek=$ayarsorgu->fetch(PDO::FETCH_ASSOC);
                                 <li class=""><a href="index.php">Çöp</a></li>
                                 </ul>
                             </li>
+                            <!--
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-layout-sidebar-right"></i><span>Bileşenler
                                     </span></a>
@@ -92,6 +97,7 @@ $ayarcek=$ayarsorgu->fetch(PDO::FETCH_ASSOC);
                                 <li class=""><a href="index.php">Yeni Ekle</a></li>
                                 </ul>
                             </li>
+                            -->
                             <hr style="border:0.5px solid darkslategrey">
                             <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-email"></i><span>E-Postalar
