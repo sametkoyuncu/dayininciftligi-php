@@ -139,7 +139,7 @@ ul {
       text-transform: uppercase;
       font-weight: 700; }
     .header_area .navbar .navbar-brand {
-      padding-top: 0; }
+      padding-top: 15px; }
     .header_area .navbar .nav .nav-item {
       margin-right: 45px; }
       .header_area .navbar .nav .nav-item .nav-link {
