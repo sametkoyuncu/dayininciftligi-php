@@ -39,8 +39,8 @@ $kategoribilgisi = $db->prepare("SELECT * FROM kategoriler WHERE kategori_id=:id
                 <div class="media contact-info">
                     <span class="contact-info__icon"><i class="ti-tablet iletisim-ikon"></i></span>
                     <div class="media-body">
-                        <h3><a href="tel:905339318226"><?php echo $iletisimcek['iletisim_telefon']; ?></a></h3>
-                        <p>08:00 - 20:00</p>
+                        <h3><a href="tel:905385891875"><?php echo $iletisimcek['iletisim_telefon']; ?></a></h3>
+                        <p>09:00 - 20:00</p>
                     </div>
                 </div>
                 <div class="media contact-info">
