@@ -1,5 +1,6 @@
 # dayininciftligi
  Dayının Çiftliği Admin Panelli Websitesi
+ (Güvenlik sebebiyle .Net Core ile tekrar kodlandı.)
 # Notlar (görülen hata, eksik vs.)
 - breadcrumb düzenlendi, veritabanına eksik sayfaların bilgileri girilecek
 - footer
